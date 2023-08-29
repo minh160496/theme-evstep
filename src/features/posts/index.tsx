@@ -9,7 +9,6 @@ import { LayoutBottom } from "@/layouts/layoutPosts/LayoutBottom";
 import { SLiderPosts } from "./SliderPosts";
 
 export const Posts = ({ posts }: { posts: any }) => {
-  console.log(posts);
   return (
     <Box>
       <Box bg="linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,46,46,0.835171568627451) 0%, rgba(255,179,0,1) 100%);">
