@@ -25,7 +25,7 @@ export const useSize = () => {
       window.removeEventListener("resize", setWidth);
       window.removeEventListener("scroll", setHeigth);
     };
-  }, []);
+  }, [hasWindow]);
 
   return { size };
 };
