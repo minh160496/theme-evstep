@@ -14,7 +14,16 @@ export const Header = () => {
         <HeaderTop />
       </Container>
       <Divider />
-      <Box boxShadow="md">
+      <Box
+        boxShadow="md"
+        pos={"sticky"}
+        top={"0"}
+        left={0}
+        right={0}
+        zIndex={10}
+        bg={"white"}
+        py={"12px"}
+      >
         <Container
           as={Flex}
           bg={"white"}

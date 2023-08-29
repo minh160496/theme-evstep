@@ -1,5 +1,6 @@
 "use client";
 
+import { CardSpecial } from "@/components/CardSpecial";
 import {
   Box,
   Button,
@@ -21,27 +22,6 @@ interface Props {
   bg: string;
 }
 
-const ItemWrapper = (props: Props) => {
-  const { children, bg } = props;
-
-  return (
-    <Box
-      mb={4}
-      shadow="base"
-      borderWidth="1px"
-      alignSelf={{ base: "center", lg: "flex-start" }}
-      borderColor={"gray.200"}
-      borderRadius={"xl"}
-      bg={bg}
-      pos="relative"
-      transition={"all ease .4s"}
-      _hover={{ transform: "translateY(-24px)" }}
-    >
-      {children}
-    </Box>
-  );
-};
-
 const Item = ({
   degree,
   step,
@@ -58,27 +38,8 @@ const Item = ({
   bg: string;
 }) => {
   return (
-    <ItemWrapper bg={bg}>
+    <CardSpecial bg={bg} step={step}>
       <Box position="relative">
-        <Box
-          position="absolute"
-          top="-16px"
-          left="50%"
-          style={{ transform: "translate(-50%)" }}
-        >
-          <Text
-            textTransform="uppercase"
-            bg={"red.300"}
-            px={3}
-            py={1}
-            color={"white"}
-            fontSize="sm"
-            fontWeight="600"
-            rounded="xl"
-          >
-            {step}
-          </Text>
-        </Box>
         <Box py={4} px={12}>
           <Text fontWeight="500" fontSize="2xl">
             {pointOutput}
@@ -107,7 +68,7 @@ const Item = ({
           </Box>
         </VStack>
       </Box>
-    </ItemWrapper>
+    </CardSpecial>
   );
 };
 

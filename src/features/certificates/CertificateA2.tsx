@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { BoxTest } from "./BoxTest";
+import { BoxTest } from "../../components/BoxTest";
 
 export const CertificateA2 = () => {
   return (
@@ -55,21 +55,12 @@ export const CertificateA2 = () => {
             <Text>
               Chứng chỉ tiếng Anh A2 là trình độ tiếng Anh bậc 2 theo khung năng
               lực ngoại ngữ 6 bậc dành cho Việt Nam hay khung tham chiếu châu Âu
-              về ngôn ngữ. <strong>Bằng tiếng Anh A2</strong> do 14 trường được
-              Bộ Giáo Dục và Đào tạo cho phép tổ chức thi hoặc chứng chỉ A2
-              tiếng Anh quốc tế do trường Đại học Cambridge Anh cấp. Xem
-              ngay&nbsp;{" "}
-              <a
-                href="https://vstep.edu.vn/lich-thi-tieng-anh-a2-b1-b2"
-                target="_blank"
-                title="Lịch thi chứng chỉ tiếng Anh A2,B1,B2,C1"
-              >
-                <span style={{ textDecoration: "none" }}>
-                  <strong>lịch thi chứng chỉ tiếng Anh A2, B1, B2, C1</strong>
-                </span>
-              </a>
-              của các trường thuộc Bộ bao gồm lịch thi gần nhất, hồ sơ đăng ký
-              dự thi, cách đăng ký dự thi trong link đi kèm.
+              về ngôn ngữ. Bằng tiếng Anh A2do 14 trường được Bộ Giáo Dục và Đào
+              tạo cho phép tổ chức thi hoặc chứng chỉ A2 tiếng Anh quốc tế do
+              trường Đại học Cambridge Anh cấp. Xem ngay&nbsp; lịch thi chứng
+              chỉ tiếng Anh A2, B1, B2, C1 của các trường thuộc Bộ bao gồm lịch
+              thi gần nhất, hồ sơ đăng ký dự thi, cách đăng ký dự thi trong link
+              đi kèm.
             </Text>
 
             <Image
@@ -93,8 +84,8 @@ export const CertificateA2 = () => {
               nhu cầu thiết yếu. Như vậy,&nbsp;so sánh trình độ A2 tiếng Anh với
               các chứng chỉ tiếng Anh quốc gia A, B, C cũ thì&nbsp;&nbsp;trình
               độ A2 tương đương trình độ B trước đây nhưng hiện tại Bộ Giáo dục
-              không còn công nhận chứng chỉ A, B, C cũ mà thay thế bằng các{" "}
-              <strong>chứng chỉ tiếng Anh A2, B1, B2</strong>
+              không còn công nhận chứng chỉ A, B, C cũ mà thay thế bằng các
+              chứng chỉ tiếng Anh A2, B1, B2
             </Text>
           </SimpleGrid>
         </Box>

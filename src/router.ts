@@ -9,33 +9,33 @@ export const menus = [
     title: "Chứng chỉ",
     childs: [
       {
-        path: "chung-chi-tieng-b1",
+        path: "/chung-chi-tieng-b1",
         title: "Tiếng anh B1-B2-C1",
       },
       {
-        path: "chung-chi-tieng-a2",
+        path: "/chung-chi-tieng-a2",
         title: "Tiếng anh A2",
       },
       {
-        path: "#",
+        path: "/khung-nang-luc-6-bac",
         title: "Khung NLNN",
       },
     ],
   },
   {
-    path: "#", // the url
-    title: "Bồi dưỡng",
+    path: "/lich-khai-giang", // the url
+    title: "Khai giảng",
   },
   {
-    path: "#", // the url
+    path: "/lich-thi-evstep", // the url
     title: "Lịch thi",
   },
   {
-    path: "#", // the url
+    path: "https://a2b1b2c1.tienganhb1.com/Home", // the url
     title: "Vào thi thử",
   },
   {
-    path: "#", // the url
+    path: "/tin-tuc", // the url
     title: "Tin tức", // view rendered
   },
 ];

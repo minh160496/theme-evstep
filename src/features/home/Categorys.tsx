@@ -1,6 +1,6 @@
 import { Link } from "@chakra-ui/next-js";
+import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
-import { Container, Heading, SimpleGrid } from "@chakra-ui/react";
 import { BASE_URL_MEDIAS } from "../../CONST";
 
 export const Item = ({
@@ -13,26 +13,45 @@ export const Item = ({
   title: string;
 }) => {
   return (
-    <Link href={path || "/"}>
+    <Box
+      as={Link}
+      href={path || "/"}
+      pos="relative"
+      transition={"all ease .4s"}
+      _hover={{ transform: "translateY(-10px)" }}
+    >
       <Image width={700} height={400} src={image} alt={title} />
-    </Link>
+      <Box
+        as={Flex}
+        pos={"absolute"}
+        top={0}
+        left={"10%"}
+        right={"40%"}
+        bottom={0}
+        align={"center"}
+      >
+        <Heading as={"h2"} size={"md"} color={"white"} textAlign={"center"}>
+          {title}
+        </Heading>
+      </Box>
+    </Box>
   );
 };
 
 const categotys = [
   {
     image: "/category-1.png",
-    path: "#",
+    path: "/tin-tuc",
     title: "Tiểu Học tiếng Anh",
   },
   {
     image: "/category-2.jpg",
-    path: "#",
+    path: "/tin-tuc",
     title: "Tiếng Anh THCS",
   },
   {
     image: "/category-3.jpg",
-    path: "#",
+    path: "/tin-tuc",
     title: "Lyện thi - luyện kỹ năng",
   },
 ];
