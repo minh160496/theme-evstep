@@ -4,7 +4,8 @@ import { Posts } from "@/features/posts";
 
 export const getPost = async () => {
   const api_url =
-    process.env.API_URL || "http://localhost/wordpress/wp-json/wp/v2";
+    process.env.NEXT_PUBLIC_API_URL ||
+    "http://localhost/wordpress/wp-json/wp/v2";
   const res = await fetch(`${api_url}/posts`, { next: { revalidate: 10 } });
 
   if (!res.ok) {
