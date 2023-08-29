@@ -1,3 +1,5 @@
+"use client";
+
 import { FormContact } from "@/components/FormContact";
 import { ModalBase } from "@/components/Modal";
 import {

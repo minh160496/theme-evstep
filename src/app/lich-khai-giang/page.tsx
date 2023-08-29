@@ -1,9 +1,11 @@
-"use client";
-
 import { Schedule } from "@/features/schedule";
 
 const Page = () => {
-  return <Schedule />;
+  return (
+    <>
+      <Schedule />
+    </>
+  );
 };
 
 export default Page;
