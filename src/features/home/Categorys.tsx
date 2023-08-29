@@ -1,4 +1,4 @@
-import { Link } from "@chakra-ui/next-js";
+import Link from "next/link";
 import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
 import { BASE_URL_MEDIAS } from "../../CONST";
@@ -38,7 +38,7 @@ export const Item = ({
   );
 };
 
-const categotys = [
+export const categotys = [
   {
     image: "/category-1.png",
     path: "/tin-tuc",

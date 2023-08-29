@@ -1,19 +1,13 @@
-import { Link } from "@chakra-ui/next-js";
+import { CardBlog } from "@/components/CardBlog";
 import {
-  Avatar,
-  Box,
   Button,
-  Center,
   Container,
   HStack,
   Heading,
   SimpleGrid,
-  Stack,
-  Text,
 } from "@chakra-ui/react";
-import Image from "next/image";
+import Link from "next/link";
 import { BASE_URL_MEDIAS } from "../../CONST";
-import { CardBlog } from "@/components/CardBlog";
 
 const events = [
   {

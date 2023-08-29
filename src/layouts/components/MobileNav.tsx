@@ -2,62 +2,68 @@
 
 import { menus } from "@/router";
 import {
-  Box,
   Collapse,
   Divider,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
+  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   Flex,
   Icon,
   IconButton,
   Stack,
-  Text,
   useDisclosure,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { useRef } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
 import { Logo } from "./Logo";
+import { HeaderTop } from "./HeaderTop";
 
 interface INavItem {
   title: string;
-  children?: Array<INavItem>;
+  childs?: Array<{ title: string; childs?: Array<{}>; path?: string }>;
   path?: string;
+  onClose: () => void;
 }
 
-export const MobileNavItem = ({ title, children, path }: INavItem) => {
+export const MobileNavItem = ({ title, childs, path, onClose }: INavItem) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Box
+    <Stack spacing={4} onClick={childs && onToggle}>
+      <Flex
         py={2}
-        as="a"
-        href={path ?? "#"}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
           textDecoration: "none",
         }}
+        fontWeight={600}
+        color={"gray.600"}
       >
-        <Text fontWeight={600} color={"gray.600"}>
+        <Link
+          href={path ?? "#"}
+          style={{ width: "100%" }}
+          onClick={() => !childs && onClose()}
+        >
           {title}
-        </Text>
-        {children && (
+        </Link>
+        {childs && (
           <Icon
             as={BsChevronDown}
             transition={"all .25s ease-in-out"}
             transform={isOpen ? "rotate(180deg)" : ""}
-            w={6}
-            h={6}
+            w={"20px"}
+            h={"20px"}
           />
         )}
-      </Box>
+      </Flex>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
         <Stack
@@ -68,11 +74,21 @@ export const MobileNavItem = ({ title, children, path }: INavItem) => {
           borderColor={"gray.200"}
           align={"start"}
         >
-          {children &&
-            children.map((child) => (
-              <Box as="a" key={child.title} py={2} href={child.path}>
+          {childs &&
+            childs.map((child) => (
+              <Link
+                key={child.title}
+                style={{
+                  paddingTop: "8px",
+                  paddingBottom: "8px",
+                  fontWeight: "600",
+                  width: "100%",
+                }}
+                href={child.path ?? "/"}
+                onClick={onClose}
+              >
                 {child.title}
-              </Box>
+              </Link>
             ))}
         </Stack>
       </Collapse>
@@ -89,13 +105,9 @@ export const MobileNav = () => {
       <IconButton
         ref={btnRef}
         onClick={onOpen}
-        icon={
-          isOpen ? (
-            <MdClose width={3} height={3} />
-          ) : (
-            <AiOutlineMenu width={5} height={5} />
-          )
-        }
+        w={"50px"}
+        h={"50px"}
+        icon={isOpen ? <MdClose width={3} height={3} /> : <AiOutlineMenu />}
         variant={"ghost"}
         aria-label={"Toggle Navigation"}
       />
@@ -116,12 +128,20 @@ export const MobileNav = () => {
           <Divider />
 
           <DrawerBody>
-            <Stack bg={"white"} p={4} display={{ md: "none" }}>
+            <Stack bg={"white"} p={4} display={{ lg: "none" }}>
               {menus.map((navItem) => (
-                <MobileNavItem key={navItem.title} {...navItem} />
+                <MobileNavItem
+                  key={navItem.title}
+                  {...navItem}
+                  onClose={onClose}
+                />
               ))}
             </Stack>
           </DrawerBody>
+          <Divider />
+          <DrawerFooter py="24px" px={"12px"}>
+            <HeaderTop />
+          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>

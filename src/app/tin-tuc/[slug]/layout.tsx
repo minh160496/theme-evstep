@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { TIN_TUC } from "@/CONST";
+import { LayoutPost } from "@/layouts/layoutPost";
 
 export const metadata: Metadata = {
   title: TIN_TUC.meta.title,
@@ -7,7 +8,11 @@ export const metadata: Metadata = {
 };
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  return <>{children}</>;
+  return (
+    <div>
+      <LayoutPost>{children}</LayoutPost>
+    </div>
+  );
 };
 
 export default Layout;

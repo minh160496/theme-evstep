@@ -1,11 +1,11 @@
 "use client";
 
-import { BASE_URL_MEDIAS } from "@/CONST";
 import { CardBlog } from "@/components/CardBlog";
-import { Box, Container, Divider, Heading, SimpleGrid } from "@chakra-ui/react";
-import Image from "next/image";
+import { CardBlogVert } from "@/components/CardBlogVert";
+import { Box, Container, Divider, Heading, VStack } from "@chakra-ui/react";
 import { SwiperSlide } from "swiper/react";
 import xss from "xss";
+import { LayoutBottom } from "@/layouts/layoutPosts/LayoutBottom";
 import { SLiderPosts } from "./SliderPosts";
 
 export const Posts = ({ posts }: { posts: any }) => {
@@ -44,19 +44,31 @@ export const Posts = ({ posts }: { posts: any }) => {
       </Box>
 
       <Divider size={"xl"} />
-      <Container maxW={"6xl"}>
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={"32px"}>
-          {posts?.map((post: any, index: number) => (
-            <CardBlog
-              key={index}
-              title={post?.title?.rendered}
-              desc={xss(post.excerpt.rendered)}
-              image=""
-              path={`/tin-tuc/${post?.slug}`}
-            />
-          ))}
-        </SimpleGrid>
-      </Container>
+      <Box pt={"32px"}>
+        <LayoutBottom>
+          <Box>
+            <Heading
+              size={"lg"}
+              pb={"20px"}
+              textAlign={{ base: "center", lg: "start" }}
+            >
+              Tin tức
+            </Heading>
+            <VStack spacing={"16px"}>
+              {posts.map((post: any, index: number) => (
+                <CardBlogVert
+                  key={index}
+                  title={post?.title?.rendered}
+                  desc={xss(post.excerpt.rendered)}
+                  tag="new"
+                  image=""
+                  path={`/tin-tuc/${post?.slug}`}
+                />
+              ))}
+            </VStack>
+          </Box>
+        </LayoutBottom>
+      </Box>
     </Box>
   );
 };

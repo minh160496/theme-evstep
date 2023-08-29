@@ -16,7 +16,9 @@ export const getPost = async () => {
 
 const Page = async () => {
   const posts = await getPost();
-  const news = posts?.filter((post: any) => post.type === "post");
+  const news = posts?.filter(
+    (post: any) => post.type === "post" && post.status === "publish"
+  );
   return (
     <div>
       <Posts posts={news} />

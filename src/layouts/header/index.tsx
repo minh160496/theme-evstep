@@ -34,16 +34,16 @@ export const Header = () => {
           align={"center"}
           maxW="6xl"
         >
-          <Flex ml={{ base: -2 }} display={{ base: "flex", md: "none" }}>
+          <Flex ml={{ base: -2 }} display={{ base: "flex", lg: "none" }}>
             <MobileNav />
           </Flex>
           <Flex
             flex={{ base: 1 }}
-            justify={{ base: "center", md: "start" }}
+            justify={{ base: "center", lg: "start" }}
             align={"center"}
           >
             <Logo />
-            <Flex display={{ base: "none", md: "flex" }} ml={10}>
+            <Flex display={{ base: "none", lg: "flex" }} ml={10}>
               <DesktopNav />
             </Flex>
           </Flex>

@@ -1,3 +1,4 @@
+import { menus } from "@/router";
 import {
   Box,
   Flex,
@@ -8,9 +9,8 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { BsChevronRight } from "react-icons/bs";
-import { menus } from "@/router";
-import { Link } from "@chakra-ui/next-js";
 
 interface INavItem {
   title: string;
@@ -71,7 +71,7 @@ export const DesktopNav = () => {
 export const DesktopSubNav = ({ title, path }: INavItem) => {
   return (
     <Box
-      as="a"
+      as={Link}
       href={path}
       role={"group"}
       display={"block"}

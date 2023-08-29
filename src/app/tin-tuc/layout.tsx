@@ -1,5 +1,5 @@
-import { Metadata } from "next";
 import { TIN_TUC } from "@/CONST";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: TIN_TUC.meta.title,

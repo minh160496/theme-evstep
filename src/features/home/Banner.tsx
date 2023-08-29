@@ -1,4 +1,4 @@
-import { Link } from "@chakra-ui/next-js";
+import Link from "next/link";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";

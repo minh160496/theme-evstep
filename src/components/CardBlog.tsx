@@ -1,7 +1,7 @@
 "use client";
 
 import { BASE_URL_MEDIAS } from "@/CONST";
-import { Link } from "@chakra-ui/next-js";
+import Link from "next/link";
 import { Avatar, Box, Center, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -11,11 +11,13 @@ export const CardBlog = ({
   title,
   desc,
   path,
+  tag,
 }: {
   image?: string;
   title: string;
   desc: string;
   path: string;
+  tag?: string;
 }) => {
   const [isMounted, setMount] = useState(false);
 
@@ -57,7 +59,7 @@ export const CardBlog = ({
             fontSize={"sm"}
             letterSpacing={1.1}
           >
-            Blog
+            {tag}
           </Text>
           <Heading
             className="event-heading"
