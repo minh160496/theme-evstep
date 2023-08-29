@@ -1,14 +1,17 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { BASE_URL_MEDIAS } from "../../CONST";
 
 const bannerImages = ["/banner-1.jpg", "/banner-2.png", "/banner-3.png"];
 
 export const Banner = () => {
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
   return (
     <>
       <Swiper

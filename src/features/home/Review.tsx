@@ -14,7 +14,10 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { BASE_URL_MEDIAS } from "../../CONST";
+
+const BASE_URL_MEDIAS =
+  process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+  "http://localhost/wordpress/wp-content/uploads/2023/08";
 
 export const Item = ({
   name,

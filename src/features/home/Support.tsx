@@ -18,7 +18,6 @@ import { GiSpookyHouse } from "react-icons/gi";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { PiPiggyBankBold } from "react-icons/pi";
 import { SlCalender } from "react-icons/sl";
-import { BASE_URL_MEDIAS } from "../../CONST";
 
 const accSupport = [
   {
@@ -77,6 +76,10 @@ export const AccSupport = () => {
 };
 
 export const Support = () => {
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
   return (
     <Container maxW={"6xl"}>
       <SimpleGrid columns={{ base: 1, lg: 2 }} gap={"36px"}>

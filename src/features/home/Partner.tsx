@@ -5,16 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { BASE_URL_MEDIAS } from "../../CONST";
 import { useSize } from "../../hooks/useSizeWindow";
-
-const partners = [
-  `${BASE_URL_MEDIAS}/viettel.png`,
-  `${BASE_URL_MEDIAS}/vtv7.png`,
-  `${BASE_URL_MEDIAS}/na.png`,
-  `${BASE_URL_MEDIAS}/vn-ex.png`,
-  `${BASE_URL_MEDIAS}/pana.png`,
-];
 
 export const StyledContainer = styled(Container)`
   .mySwiper {
@@ -24,6 +15,19 @@ export const StyledContainer = styled(Container)`
 
 export const Partner = () => {
   const { size } = useSize();
+
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
+  const partners = [
+    `${BASE_URL_MEDIAS}/viettel.png`,
+    `${BASE_URL_MEDIAS}/vtv7.png`,
+    `${BASE_URL_MEDIAS}/na.png`,
+    `${BASE_URL_MEDIAS}/vn-ex.png`,
+    `${BASE_URL_MEDIAS}/pana.png`,
+  ];
+
   return (
     <StyledContainer maxW="6xl">
       <Heading size={"lg"} textAlign={"center"} pb={"24px"}>

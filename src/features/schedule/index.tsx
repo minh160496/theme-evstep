@@ -1,4 +1,3 @@
-import { BASE_URL_MEDIAS } from "@/CONST";
 import { FormContact } from "@/components/FormContact";
 import { ModalBase } from "@/components/Modal";
 import {
@@ -82,6 +81,10 @@ const schedule = [
 ];
 
 export const Schedule = () => {
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
   const [indexActive, setIndex] = useState(0);
   const { onClose, onOpen, onToggle, isOpen } = useDisclosure();
 

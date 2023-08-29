@@ -1,9 +1,8 @@
-import { TIN_TUC } from "@/CONST";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: TIN_TUC.meta.title,
-  description: TIN_TUC.meta.desc,
+  title: "Tin tức",
+  description: "Tin tức về Evstep",
 };
 
 const Layout = ({ children }: { children: React.ReactNode }) => {

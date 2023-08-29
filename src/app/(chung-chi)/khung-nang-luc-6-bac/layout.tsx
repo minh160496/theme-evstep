@@ -1,9 +1,8 @@
 import { Metadata } from "next";
-import { KHUNG_NL } from "@/CONST";
 
 export const metadata: Metadata = {
-  title: KHUNG_NL.meta.title,
-  description: KHUNG_NL.meta.desc,
+  title: "Khung năng lực bậc 6",
+  description: "Thông tin chi tiết khung năng lực",
 };
 
 const Layout = ({ children }: { children: React.ReactNode }) => {

@@ -1,12 +1,11 @@
-import { HOME } from "@/CONST";
 import { Footer } from "@/layouts/footer";
 import { Header } from "@/layouts/header";
 import type { Metadata } from "next";
 import { Providers } from "./provider";
 
 export const metadata: Metadata = {
-  title: HOME.meta.title,
-  description: HOME.meta.desc,
+  title: "Trang chủ EVstep",
+  description: "Evstep - luyện thi tiếng anh",
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

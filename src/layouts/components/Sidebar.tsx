@@ -1,6 +1,5 @@
 "use client";
 
-import { BASE_URL_MEDIAS } from "@/CONST";
 import { Item, categotys } from "@/features/home/Categorys";
 import {
   Box,
@@ -19,6 +18,10 @@ import { SiZalo } from "react-icons/si";
 import { FormContact } from "./FormContact";
 
 export const Sidebar = () => {
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
   return (
     <Box>
       <Box>

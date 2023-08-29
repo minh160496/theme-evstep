@@ -7,33 +7,36 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { BASE_URL_MEDIAS } from "../../CONST";
-
-const events = [
-  {
-    image: `${BASE_URL_MEDIAS}/blog.jpg`,
-    path: "#",
-    title:
-      "Phát động cuộc thi: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” dành cho tất cả học viên JUNIOR trên toàn quốc",
-    desc: "PHÁT ĐỘNG CUỘC THI: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” DÀNH CHO TẤT CẢ HỌC VIÊN JUNIOR TRÊN TOÀN QUỐC. Cuộc thi nằm trong chuỗi hoạt động hưởng ứng mùa Back To School và chia sẻ giá trị của bộ sách FUTURE của Ms Hoa Junior.",
-  },
-  {
-    image: `${BASE_URL_MEDIAS}/blog.jpg`,
-    path: "#",
-    title:
-      "Phát động cuộc thi: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” dành cho tất cả học viên JUNIOR trên toàn quốc",
-    desc: "PHÁT ĐỘNG CUỘC THI: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” DÀNH CHO TẤT CẢ HỌC VIÊN JUNIOR TRÊN TOÀN QUỐC. Cuộc thi nằm trong chuỗi hoạt động hưởng ứng mùa Back To School và chia sẻ giá trị của bộ sách FUTURE của Ms Hoa Junior.",
-  },
-  {
-    image: `${BASE_URL_MEDIAS}/blog.jpg`,
-    path: "#",
-    title:
-      "Phát động cuộc thi: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” dành cho tất cả học viên JUNIOR trên toàn quốc",
-    desc: "PHÁT ĐỘNG CUỘC THI: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” DÀNH CHO TẤT CẢ HỌC VIÊN JUNIOR TRÊN TOÀN QUỐC. Cuộc thi nằm trong chuỗi hoạt động hưởng ứng mùa Back To School và chia sẻ giá trị của bộ sách FUTURE của Ms Hoa Junior.",
-  },
-];
 
 export const Event = () => {
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
+  const events = [
+    {
+      image: `${BASE_URL_MEDIAS}/blog.jpg`,
+      path: "#",
+      title:
+        "Phát động cuộc thi: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” dành cho tất cả học viên JUNIOR trên toàn quốc",
+      desc: "PHÁT ĐỘNG CUỘC THI: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” DÀNH CHO TẤT CẢ HỌC VIÊN JUNIOR TRÊN TOÀN QUỐC. Cuộc thi nằm trong chuỗi hoạt động hưởng ứng mùa Back To School và chia sẻ giá trị của bộ sách FUTURE của Ms Hoa Junior.",
+    },
+    {
+      image: `${BASE_URL_MEDIAS}/blog.jpg`,
+      path: "#",
+      title:
+        "Phát động cuộc thi: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” dành cho tất cả học viên JUNIOR trên toàn quốc",
+      desc: "PHÁT ĐỘNG CUỘC THI: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” DÀNH CHO TẤT CẢ HỌC VIÊN JUNIOR TRÊN TOÀN QUỐC. Cuộc thi nằm trong chuỗi hoạt động hưởng ứng mùa Back To School và chia sẻ giá trị của bộ sách FUTURE của Ms Hoa Junior.",
+    },
+    {
+      image: `${BASE_URL_MEDIAS}/blog.jpg`,
+      path: "#",
+      title:
+        "Phát động cuộc thi: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” dành cho tất cả học viên JUNIOR trên toàn quốc",
+      desc: "PHÁT ĐỘNG CUỘC THI: “MỞ TRANG SÁCH - VẠN ĐIỀU HAY” DÀNH CHO TẤT CẢ HỌC VIÊN JUNIOR TRÊN TOÀN QUỐC. Cuộc thi nằm trong chuỗi hoạt động hưởng ứng mùa Back To School và chia sẻ giá trị của bộ sách FUTURE của Ms Hoa Junior.",
+    },
+  ];
+
   return (
     <Container maxW={"6xl"} pb={"64px"}>
       <Heading textAlign={"center"} size={"lg"} pb="24px">

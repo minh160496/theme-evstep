@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BASE_URL_MEDIAS } from "../../CONST";
 
 export const Logo = () => {
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
   return (
     <Link href="/">
       <Image

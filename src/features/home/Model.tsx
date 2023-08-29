@@ -16,7 +16,6 @@ import {
 import { BsFillPlayCircleFill } from "react-icons/bs";
 
 import React, { useState } from "react";
-import { BASE_URL_MEDIAS } from "../../CONST";
 
 export const TagItem = ({
   index,
@@ -64,6 +63,11 @@ const list = [
 
 export const Model = () => {
   const [step, setStep] = useState(1);
+
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
   return (
     <Box
       bgImage={`url(${BASE_URL_MEDIAS}/bg.svg)`}

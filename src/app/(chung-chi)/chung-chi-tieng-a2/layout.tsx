@@ -1,9 +1,8 @@
 import { Metadata } from "next";
-import { CHUNG_CHI_A2 } from "@/CONST";
 
 export const metadata: Metadata = {
-  title: CHUNG_CHI_A2.meta.title,
-  description: CHUNG_CHI_A2.meta.desc,
+  title: "Chứng chỉ tiếng Anh A2",
+  description: "Thông tin chi tiết chứng chỉ tiếng Anh A2",
 };
 
 const Layout = ({ children }: { children: React.ReactNode }) => {

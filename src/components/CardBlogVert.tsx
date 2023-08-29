@@ -1,6 +1,5 @@
 "use client";
 
-import { BASE_URL_MEDIAS } from "@/CONST";
 import {
   Box,
   Button,
@@ -30,6 +29,10 @@ export const CardBlogVert = ({
   image?: string;
   path?: string;
 }) => {
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
   const [isMounted, setMount] = useState(false);
 
   useEffect(() => {

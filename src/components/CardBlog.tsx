@@ -1,9 +1,8 @@
 "use client";
 
-import { BASE_URL_MEDIAS } from "@/CONST";
-import Link from "next/link";
 import { Avatar, Box, Center, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export const CardBlog = ({
@@ -20,6 +19,10 @@ export const CardBlog = ({
   tag?: string;
 }) => {
   const [isMounted, setMount] = useState(false);
+
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
 
   useEffect(() => {
     setMount(true);

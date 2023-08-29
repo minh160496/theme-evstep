@@ -1,10 +1,12 @@
 import { Box, Container, SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
-import { BASE_URL_MEDIAS } from "../../CONST";
 import { FormContact } from "../../components/FormContact";
 
 export const Contact = () => {
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
   return (
     <Box
       bgImage={`url(${BASE_URL_MEDIAS}/bg-2.svg)`}

@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
-import { BASE_URL_MEDIAS } from "../../CONST";
+import Link from "next/link";
 
 export const Item = ({
   path,
@@ -57,6 +56,10 @@ export const categotys = [
 ];
 
 export const Categorys = () => {
+  const BASE_URL_MEDIAS =
+    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
+    "http://localhost/wordpress/wp-content/uploads/2023/08";
+
   return (
     <Container maxW="6xl">
       <Heading fontSize="2xl" mb="24px" textAlign="center">
