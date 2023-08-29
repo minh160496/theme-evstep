@@ -4,7 +4,8 @@ import { Post } from "@/features/post";
 import { getPost } from "../page";
 
 export async function generateStaticParams() {
-  const api_url = "http://localhost/wordpress/wp-json/wp/v2";
+  const api_url =
+    process.env.API_URL || "http://127.0.0.1/wordpress/wp-json/wp/v2";
   const posts = await fetch(`${api_url}/posts`, {
     next: { revalidate: 10 },
   }).then((res) => res.json());
