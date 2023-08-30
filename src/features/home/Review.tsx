@@ -15,10 +15,6 @@ import "swiper/css/effect-cards";
 import { EffectCards } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const BASE_URL_MEDIAS =
-  process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-  "http://localhost/wordpress/wp-content/uploads/2023/08";
-
 export const Item = ({
   name,
   label,
@@ -67,7 +63,7 @@ export const Item = ({
           />
         </Box>
         <Image
-          src={`${BASE_URL_MEDIAS}/dialog.svg`}
+          src={`/dialog.svg`}
           width={60}
           height={60}
           style={{ position: "absolute", top: 24, right: 32 }}
@@ -83,7 +79,7 @@ const reviews = [
   {
     name: "Nguyễn Văn A",
     label: "Học sinh khóa X",
-    image: `${BASE_URL_MEDIAS}/student.jpg`,
+    image: `/student.jpg`,
     title:
       "Học Viên Ms Hoa Junior cơ sở Phan Văn Trị, TPHCM xuất sắc đạt 13 - 15 khiên Cambridge",
     content:
@@ -92,7 +88,7 @@ const reviews = [
   {
     name: "Nguyễn Văn A",
     label: "Học sinh khóa X",
-    image: `${BASE_URL_MEDIAS}/student.jpg`,
+    image: `/student.jpg`,
     title:
       "Học Viên Ms Hoa Junior cơ sở Phan Văn Trị, TPHCM xuất sắc đạt 13 - 15 khiên Cambridge",
     content:
@@ -101,7 +97,7 @@ const reviews = [
   {
     name: "Nguyễn Văn A",
     label: "Học sinh khóa X",
-    image: `${BASE_URL_MEDIAS}/student.jpg`,
+    image: `/student.jpg`,
     title:
       "Học Viên Ms Hoa Junior cơ sở Phan Văn Trị, TPHCM xuất sắc đạt 13 - 15 khiên Cambridge",
     content:
@@ -110,7 +106,7 @@ const reviews = [
   {
     name: "Nguyễn Văn A",
     label: "Học sinh khóa X",
-    image: `${BASE_URL_MEDIAS}/student.jpg`,
+    image: `/student.jpg`,
     title:
       "Học Viên Ms Hoa Junior cơ sở Phan Văn Trị, TPHCM xuất sắc đạt 13 - 15 khiên Cambridge",
     content:
@@ -119,7 +115,7 @@ const reviews = [
   {
     name: "Nguyễn Văn A",
     label: "Học sinh khóa X",
-    image: `${BASE_URL_MEDIAS}/student.jpg`,
+    image: `/student.jpg`,
     title:
       "Học Viên Ms Hoa Junior cơ sở Phan Văn Trị, TPHCM xuất sắc đạt 13 - 15 khiên Cambridge",
     content:

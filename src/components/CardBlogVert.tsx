@@ -29,10 +29,6 @@ export const CardBlogVert = ({
   image?: string;
   path?: string;
 }) => {
-  const BASE_URL_MEDIAS =
-    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-    "http://localhost/wordpress/wp-content/uploads/2023/08";
-
   const [isMounted, setMount] = useState(false);
 
   useEffect(() => {
@@ -50,7 +46,7 @@ export const CardBlogVert = ({
         <Image
           width={500}
           height={300}
-          src={image || `${BASE_URL_MEDIAS}/blog.jpg`}
+          src={image || `/blog.jpg`}
           alt={title}
         />
       </Box>

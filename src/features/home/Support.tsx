@@ -76,10 +76,6 @@ export const AccSupport = () => {
 };
 
 export const Support = () => {
-  const BASE_URL_MEDIAS =
-    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-    "http://localhost/wordpress/wp-content/uploads/2023/08";
-
   return (
     <Container maxW={"6xl"}>
       <SimpleGrid columns={{ base: 1, lg: 2 }} gap={"36px"}>
@@ -96,7 +92,7 @@ export const Support = () => {
             </Heading>
           </Flex>
           <Image
-            src={`${BASE_URL_MEDIAS}/kethop.jpg`}
+            src={`/kethop.jpg`}
             alt="Kết hợp online và oflinet"
             width={600}
             height={400}

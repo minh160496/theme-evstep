@@ -11,10 +11,6 @@ import Image from "next/image";
 import { BoxTest } from "../../components/BoxTest";
 
 export const CertificateB1 = () => {
-  const BASE_URL_MEDIAS =
-    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-    "http://localhost/wordpress/wp-content/uploads/2023/08";
-
   return (
     <>
       <Box bg="linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,46,46,0.835171568627451) 0%, rgba(255,179,0,1) 100%);">
@@ -65,7 +61,7 @@ export const CertificateB1 = () => {
           </Box>
           <Box pt={"42px"}>
             <Image
-              src={`${BASE_URL_MEDIAS}/chung-chi-b1.jpg`}
+              src={`/chung-chi-b1.jpg`}
               alt="Chứng chỉ B1"
               width={400}
               height={500}

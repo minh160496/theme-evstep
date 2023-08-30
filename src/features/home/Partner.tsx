@@ -16,16 +16,12 @@ export const StyledContainer = styled(Container)`
 export const Partner = () => {
   const { size } = useSize();
 
-  const BASE_URL_MEDIAS =
-    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-    "http://localhost/wordpress/wp-content/uploads/2023/08";
-
   const partners = [
-    `${BASE_URL_MEDIAS}/viettel.png`,
-    `${BASE_URL_MEDIAS}/vtv7.png`,
-    `${BASE_URL_MEDIAS}/na.png`,
-    `${BASE_URL_MEDIAS}/vn-ex.png`,
-    `${BASE_URL_MEDIAS}/pana.png`,
+    `/viettel.png`,
+    `/vtv7.png`,
+    `/na.png`,
+    `/vn-ex.png`,
+    `/pana.png`,
   ];
 
   return (

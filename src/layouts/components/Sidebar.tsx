@@ -18,10 +18,6 @@ import { SiZalo } from "react-icons/si";
 import { FormContact } from "./FormContact";
 
 export const Sidebar = () => {
-  const BASE_URL_MEDIAS =
-    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-    "http://localhost/wordpress/wp-content/uploads/2023/08";
-
   return (
     <Box>
       <Box>
@@ -39,7 +35,7 @@ export const Sidebar = () => {
               key={index}
               path={cat.path}
               title={cat.title}
-              image={`${BASE_URL_MEDIAS}${cat.image}`}
+              image={`${cat.image}`}
             />
           ))}
         </SimpleGrid>

@@ -56,10 +56,6 @@ export const categotys = [
 ];
 
 export const Categorys = () => {
-  const BASE_URL_MEDIAS =
-    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-    "http://localhost/wordpress/wp-content/uploads/2023/08";
-
   return (
     <Container maxW="6xl">
       <Heading fontSize="2xl" mb="24px" textAlign="center">
@@ -74,7 +70,7 @@ export const Categorys = () => {
             key={index}
             path={categoty.path}
             title={categoty.title}
-            image={`${BASE_URL_MEDIAS}${categoty.image}`}
+            image={`${categoty.image}`}
           />
         ))}
       </SimpleGrid>

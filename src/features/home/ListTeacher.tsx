@@ -52,52 +52,48 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
 `;
 
 export const ListTeacher = () => {
-  const BASE_URL_MEDIAS =
-    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-    "http://localhost/wordpress/wp-content/uploads/2023/08";
-
   const { size } = useSize();
 
   const teachers = [
     {
       title: "Ms Huyền - Giáo viên được yêu thích nhất",
       desc: "2 năm sinh sống và làm việc tại Anh",
-      avt: `${BASE_URL_MEDIAS}/teacher-2.png`,
+      avt: `/teacher-2.png`,
     },
     {
       title: "Ms Huyền - Giáo viên được yêu thích nhất",
       desc: "2 năm sinh sống và làm việc tại Anh",
-      avt: `${BASE_URL_MEDIAS}/teacher-2.png`,
+      avt: `/teacher-2.png`,
     },
     {
       title: "Ms Huyền - Giáo viên được yêu thích nhất",
       desc: "2 năm sinh sống và làm việc tại Anh",
-      avt: `${BASE_URL_MEDIAS}/teacher-2.png`,
+      avt: `/teacher-2.png`,
     },
     {
       title: "Ms Huyền - Giáo viên được yêu thích nhất",
       desc: "2 năm sinh sống và làm việc tại Anh",
-      avt: `${BASE_URL_MEDIAS}/teacher-2.png`,
+      avt: `/teacher-2.png`,
     },
     {
       title: "Ms Huyền - Giáo viên được yêu thích nhất",
       desc: "2 năm sinh sống và làm việc tại Anh",
-      avt: `${BASE_URL_MEDIAS}/teacher-2.png`,
+      avt: `/teacher-2.png`,
     },
     {
       title: "Ms Huyền - Giáo viên được yêu thích nhất",
       desc: "2 năm sinh sống và làm việc tại Anh",
-      avt: `${BASE_URL_MEDIAS}/teacher-2.png`,
+      avt: `/teacher-2.png`,
     },
     {
       title: "Ms Huyền - Giáo viên được yêu thích nhất",
       desc: "2 năm sinh sống và làm việc tại Anh",
-      avt: `${BASE_URL_MEDIAS}/teacher-2.png`,
+      avt: `/teacher-2.png`,
     },
     {
       title: "Ms Huyền - Giáo viên được yêu thích nhất",
       desc: "2 năm sinh sống và làm việc tại Anh",
-      avt: `${BASE_URL_MEDIAS}/teacher-2.png`,
+      avt: `/teacher-2.png`,
     },
   ];
 

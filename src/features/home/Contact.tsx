@@ -3,13 +3,9 @@ import Image from "next/image";
 import { FormContact } from "../../components/FormContact";
 
 export const Contact = () => {
-  const BASE_URL_MEDIAS =
-    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-    "http://localhost/wordpress/wp-content/uploads/2023/08";
-
   return (
     <Box
-      bgImage={`url(${BASE_URL_MEDIAS}/bg-2.svg)`}
+      bgImage={`url(/bg-2.svg)`}
       backgroundRepeat={"no-repeat"}
       backgroundSize={"cover"}
       py={"60px"}
@@ -20,7 +16,7 @@ export const Contact = () => {
             <Image
               width={500}
               height={600}
-              src={`${BASE_URL_MEDIAS}/image-sale.png`}
+              src={`/image-sale.png`}
               alt="Khuyến mãi Evstep"
             />
           </Box>

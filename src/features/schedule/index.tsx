@@ -83,10 +83,6 @@ const schedule = [
 ];
 
 export const Schedule = () => {
-  const BASE_URL_MEDIAS =
-    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-    "http://localhost/wordpress/wp-content/uploads/2023/08";
-
   const [indexActive, setIndex] = useState(0);
   const { onClose, onOpen, onToggle, isOpen } = useDisclosure();
 
@@ -95,7 +91,7 @@ export const Schedule = () => {
       <Box mb={"62px"}>
         <Box mr={"auto"} ml={"auto"}>
           <Image
-            src={`${BASE_URL_MEDIAS}/banner-khai-giang.jpg`}
+            src={`/banner-khai-giang.jpg`}
             width={1920}
             height={600}
             alt="Lịch khai giảng"

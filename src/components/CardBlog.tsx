@@ -20,10 +20,6 @@ export const CardBlog = ({
 }) => {
   const [isMounted, setMount] = useState(false);
 
-  const BASE_URL_MEDIAS =
-    process.env.NEXT_PUBLIC_BASE_URL_MEDIAS ||
-    "http://localhost/wordpress/wp-content/uploads/2023/08";
-
   useEffect(() => {
     setMount(true);
   }, []);
@@ -50,7 +46,7 @@ export const CardBlog = ({
           <Image
             width={600}
             height={350}
-            src={image || `${BASE_URL_MEDIAS}/blog.jpg`}
+            src={image || `/blog.jpg`}
             alt={title}
           />
         </Box>
