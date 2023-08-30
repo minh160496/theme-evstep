@@ -83,7 +83,7 @@ export const DesktopSubNav = ({ title, path }: INavItem) => {
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
+            _groupHover={{ color: "red.600" }}
             fontWeight={600}
           >
             {title}
@@ -98,7 +98,7 @@ export const DesktopSubNav = ({ title, path }: INavItem) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"pink.400"} w={5} h={5} as={BsChevronRight} />
+          <Icon color={"red.700"} w={5} h={5} as={BsChevronRight} />
         </Flex>
       </Stack>
     </Box>
