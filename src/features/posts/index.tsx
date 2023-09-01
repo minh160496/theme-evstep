@@ -2,15 +2,75 @@
 
 import { CardBlog } from "@/components/CardBlog";
 import { CardBlogVert } from "@/components/CardBlogVert";
-import { Box, Container, Divider, Heading, VStack } from "@chakra-ui/react";
+import { LayoutBottom } from "@/layouts/layoutPosts/LayoutBottom";
+import { formatDate } from "@/ultil/date";
+import {
+  Box,
+  Container,
+  Divider,
+  HStack,
+  Heading,
+  VStack,
+} from "@chakra-ui/react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { SwiperSlide } from "swiper/react";
 import xss from "xss";
-import { LayoutBottom } from "@/layouts/layoutPosts/LayoutBottom";
 import { SLiderPosts } from "./SliderPosts";
+import ReactPaginate from "react-paginate";
+import styled from "@emotion/styled";
 
-export const Posts = ({ posts }: { posts: any }) => {
+const StyledPaginate = styled(ReactPaginate)`
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0 5rem;
+
+  li a {
+    border-radius: 7px;
+    padding: 0.1rem 1rem;
+    border: gray 1px solid;
+    cursor: pointer;
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+  li.previous a,
+  li.next a,
+  li.break a {
+    border-color: transparent;
+  }
+  li.active a {
+    background-color: #0366d6;
+    border-color: transparent;
+    color: white;
+    min-width: 32px;
+  }
+  li.disabled a {
+    color: grey;
+  }
+  li.disable,
+  li.disabled a {
+    cursor: default;
+  }
+`;
+
+export const Posts = ({
+  posts,
+  totalPosts,
+}: {
+  posts: any;
+  totalPosts: string | null;
+}) => {
+  const router = useRouter();
+  const len = totalPosts ? Math.ceil(Number(totalPosts) / 10) : 1;
+
+  const handleRouter = ({ selected }: { selected: number }) => {
+    router.push(`/tin-tuc?page=${selected + 1}`);
+  };
+
   return (
-    <Box>
+    <Box pb={"40px"}>
       <Box bg="linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,46,46,0.835171568627451) 0%, rgba(255,179,0,1) 100%);">
         <Container maxW={"6xl"} py="60px">
           <Heading
@@ -30,10 +90,11 @@ export const Posts = ({ posts }: { posts: any }) => {
             <SwiperSlide key={index}>
               {
                 <CardBlog
+                  date={post?.date ? formatDate(post.date) : ""}
                   key={index}
                   title={post?.title?.rendered}
                   desc={xss(post.excerpt.rendered)}
-                  image=""
+                  image={post?.featured_image || ""}
                   path={`/tin-tuc/${post?.slug}`}
                 />
               }
@@ -44,7 +105,7 @@ export const Posts = ({ posts }: { posts: any }) => {
 
       <Divider size={"xl"} />
       <Box pt={"32px"}>
-        <LayoutBottom>
+        <LayoutBottom sticky="120px">
           <Box>
             <Heading
               size={"lg"}
@@ -60,12 +121,22 @@ export const Posts = ({ posts }: { posts: any }) => {
                   title={post?.title?.rendered}
                   desc={xss(post.excerpt.rendered)}
                   tag="new"
-                  image=""
+                  image={post?.featured_image || ""}
                   path={`/tin-tuc/${post?.slug}`}
                 />
               ))}
             </VStack>
           </Box>
+
+          <HStack pt={"32px"} justify={"center"}>
+            <StyledPaginate
+              previousLabel="<"
+              nextLabel=">"
+              pageCount={Math.round(len / 3)}
+              onPageChange={handleRouter}
+              pageRangeDisplayed={0}
+            />
+          </HStack>
         </LayoutBottom>
       </Box>
     </Box>

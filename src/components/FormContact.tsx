@@ -47,7 +47,6 @@ export const FormContact = (props: IForm) => {
       process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_WEB_APP_URL ||
       "https://script.google.com/macros/s/AKfycbwzOcZJzO_j12XJSVcMJDiuRu8tFyWmznntsmBTNDvXWjQ082nYodWBeVAdUCKjWg8gew/exec";
     try {
-      console.log("posting");
       const res = await fetch(NEXT_PUBLIC_GOOGLE_SCRIPT_WEB_APP_URL, {
         method: "POST",
         mode: "no-cors",

@@ -43,18 +43,26 @@ export const CardBlogVert = ({
       rounded={"2xl"}
     >
       <Box flex={1}>
-        <Image
-          width={500}
-          height={300}
-          src={image || `/blog.jpg`}
-          alt={title}
-        />
+        <Box m={"12px 24px"} rounded={"sm"} overflow={"hidden"}>
+          <Image
+            width={500}
+            height={300}
+            src={image || `/blog.jpg`}
+            alt={title}
+          />
+        </Box>
       </Box>
 
       <Stack flex={1}>
-        <CardBody>
+        <CardBody pb={0}>
           <HStack>
-            <Tag size={"md"} variant="solid" colorScheme="red">
+            <Tag
+              size={"xl"}
+              variant="solid"
+              colorScheme="red"
+              fontSize={"sm"}
+              p="6px"
+            >
               {tag}
             </Tag>
             <Heading as={"h4"} size="sm">
@@ -65,13 +73,13 @@ export const CardBlogVert = ({
           {isMounted && (
             <Text
               color={"gray.500"}
-              fontSize={"sm"}
+              fontSize={".8rem"}
               dangerouslySetInnerHTML={{ __html: desc }}
             />
           )}
         </CardBody>
 
-        <CardFooter>
+        <CardFooter pt={0}>
           <Button variant="link" colorScheme="red" as={Link} href={path ?? "#"}>
             Xem thêm
           </Button>

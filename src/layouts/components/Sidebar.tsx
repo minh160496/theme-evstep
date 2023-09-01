@@ -17,9 +17,9 @@ import { FaFacebook } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
 import { FormContact } from "./FormContact";
 
-export const Sidebar = () => {
+export const Sidebar = ({ sticky }: { sticky?: string }) => {
   return (
-    <Box>
+    <Box pos={sticky ? "sticky" : "static"} top={sticky}>
       <Box>
         <Heading
           as={"h3"}

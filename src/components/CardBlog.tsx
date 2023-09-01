@@ -1,6 +1,14 @@
 "use client";
 
-import { Avatar, Box, Center, Heading, Stack, Text } from "@chakra-ui/react";
+import {
+  Avatar,
+  Box,
+  Center,
+  Heading,
+  Stack,
+  Text,
+  AvatarBadge,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -11,12 +19,14 @@ export const CardBlog = ({
   desc,
   path,
   tag,
+  date,
 }: {
   image?: string;
   title: string;
   desc: string;
   path: string;
   tag?: string;
+  date?: string;
 }) => {
   const [isMounted, setMount] = useState(false);
 
@@ -72,18 +82,18 @@ export const CardBlog = ({
           {isMounted && (
             <Text
               color={"gray.500"}
-              fontSize={"sm"}
+              fontSize={".8rem"}
               dangerouslySetInnerHTML={{ __html: desc }}
             />
           )}
         </Stack>
         <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
-          <Avatar
-            src={"https://avatars0.githubusercontent.com/u/1164541?v=4"}
-          />
+          <Avatar bg={"teal.300"} size={"sm"}>
+            <AvatarBadge boxSize="1.25em" bg="green.500" />
+          </Avatar>
           <Stack direction={"column"} spacing={0} fontSize={"sm"}>
-            <Text fontWeight={600}>Tác giả</Text>
-            <Text color={"gray.500"}>Feb 08, 2021 · 6min read</Text>
+            <Text fontWeight={600}>Admin</Text>
+            <Text color={"gray.500"}>{date}</Text>
           </Stack>
         </Stack>
       </Box>

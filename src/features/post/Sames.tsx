@@ -17,7 +17,7 @@ export const SamePosts = ({ postsCat }: { postsCat: any[] }) => {
     <>
       <Divider pt={"32px"} />
       <Box pt={"20px"}>
-        <HStack justifyContent={"space-between"}>
+        <HStack justifyContent={"space-between"} pb={"16px"}>
           <Heading as={"h3"} size={"md"}>
             Có thể bạn quan tâm
           </Heading>
@@ -31,17 +31,20 @@ export const SamePosts = ({ postsCat }: { postsCat: any[] }) => {
           </Button>
         </HStack>
 
-        <SimpleGrid columns={{ base: 1, lg: 3 }} gap={"20px"}>
-          {postsCat.map((postCat, index) => (
-            <GridItem key={index}>
-              <CardBlog
-                title={postCat.title.rendered}
-                desc=""
-                image=""
-                path={postCat.slug}
-              />
-            </GridItem>
-          ))}
+        <SimpleGrid columns={{ base: 1, md: 3, lg: 3 }} gap={"20px"}>
+          {postsCat.map((postCat, index) => {
+            if (index < 3)
+              return (
+                <GridItem key={index}>
+                  <CardBlog
+                    title={postCat.title.rendered}
+                    desc=""
+                    image={postCat?.featured_image || ""}
+                    path={postCat.slug}
+                  />
+                </GridItem>
+              );
+          })}
         </SimpleGrid>
       </Box>
     </>

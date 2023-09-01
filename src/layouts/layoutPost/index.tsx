@@ -10,7 +10,7 @@ export const LayoutPost = ({ children }: { children: ReactNode }) => {
       <SimpleGrid columns={{ base: 1, lg: 3 }} gap={"42px"}>
         <GridItem colSpan={{ lg: 2 }}>{children}</GridItem>
         <GridItem colSpan={{ lg: 1 }}>
-          <Sidebar />
+          <Sidebar sticky="125px" />
         </GridItem>
       </SimpleGrid>
     </Container>

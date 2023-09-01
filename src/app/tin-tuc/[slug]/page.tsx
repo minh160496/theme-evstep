@@ -1,28 +1,56 @@
 "server only";
 
 import { Post } from "@/features/post";
-import { getPost } from "../page";
 
-export async function generateStaticParams() {
-  const api_url =
-    process.env.NEXT_PUBLIC_API_URL ||
-    "http://127.0.0.1/wordpress/wp-json/wp/v2";
-  const posts = await fetch(`${api_url}/posts`, {
-    next: { revalidate: 10 },
-  }).then((res) => res.json());
+const api_url =
+  process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1/wordpress/wp-json/wp/v2";
 
-  return posts.map((post: any) => ({
-    slug: post.slug,
-  }));
-}
+export const getPost = async ({ slug }: { slug: string }) => {
+  try {
+    const res = await fetch(`${api_url}/posts?slug=${slug}`);
+    const posts = await res.json();
+
+    return posts[0];
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
+const getSamePosts = async (post: any) => {
+  const categoryId = post?.categories[0]; // Giả sử mỗi bài viết chỉ thuộc về một thể loại
+
+  if (categoryId) {
+    // Lấy danh sách các bài viết cùng thể loại
+    const resRelatedPosts = await fetch(
+      `${api_url}/posts?categories=${categoryId}&exclude=${post?.id}&per_page=3&_embed`
+    );
+
+    const relatedPosts: any[] = await resRelatedPosts.json();
+
+    const postsWithFeaturedImages = relatedPosts?.map((relatedPost: any) => {
+      const featured_image =
+        post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
+
+      return {
+        ...relatedPost,
+        featured_image,
+      };
+    });
+
+    return postsWithFeaturedImages || [];
+  }
+
+  return [];
+};
 
 const Page = async ({ params }: { params: { slug: string } }) => {
-  const posts = await getPost();
-  const post = posts.find((post: any) => post.slug === params.slug);
+  const post = await getPost({ slug: params.slug });
+  const relatedPosts = await getSamePosts(post);
 
   return (
     <div>
-      <Post post={post} />
+      <Post post={post} relatedPosts={relatedPosts} />
     </div>
   );
 };
