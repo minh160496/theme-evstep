@@ -1,3 +1,5 @@
+"server only";
+
 import { Footer } from "@/layouts/footer";
 import { Header } from "@/layouts/header";
 import type { Metadata } from "next";

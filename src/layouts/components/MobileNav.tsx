@@ -21,9 +21,8 @@ import Link from "next/link";
 import { useRef } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";
-import { MdClose } from "react-icons/md";
-import { Logo } from "./Logo";
 import { HeaderTop } from "./HeaderTop";
+import { Logo } from "./Logo";
 
 interface INavItem {
   title: string;
@@ -103,11 +102,11 @@ export const MobileNav = () => {
   return (
     <>
       <IconButton
-        ref={btnRef}
-        onClick={onOpen}
         w={"50px"}
         h={"50px"}
-        icon={isOpen ? <MdClose width={3} height={3} /> : <AiOutlineMenu />}
+        ref={btnRef}
+        onClick={onOpen}
+        icon={<Icon as={AiOutlineMenu} w={"24px"} h={"24px"} />}
         variant={"ghost"}
         aria-label={"Toggle Navigation"}
       />

@@ -1,7 +1,8 @@
-import { Box, HStack, Icon, Link, Tag, TagLabel } from "@chakra-ui/react";
-import React, { ReactNode } from "react";
+import { HStack, Icon, Link, Tag, TagLabel } from "@chakra-ui/react";
+import { ReactNode } from "react";
 import { LuPhone } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
+import { Search } from "./Search";
 
 export const Tags = ({
   label,
@@ -23,23 +24,24 @@ export const Tags = ({
       href={`${type}:${label}`}
     >
       {children}
-      <TagLabel>{label}</TagLabel>
+      <TagLabel fontSize={{ base: ".6rem", md: "sm" }}>{label}</TagLabel>
     </Tag>
   );
 };
 
-export const HeaderTop = () => {
+export const HeaderTop = ({ hasSearch }: { hasSearch?: boolean }) => {
   return (
-    <HStack align={"center"}>
-      <Box mr="12px">
+    <HStack align={"center"} justify={"space-between"}>
+      <HStack>
         <Tags type="tel" label="0985764235">
           <Icon as={LuPhone} />
         </Tags>
-      </Box>
 
-      <Tags type="email" label="aume@gmail.com">
-        <Icon as={MdOutlineMail} />
-      </Tags>
+        <Tags type="email" label="aume@gmail.com">
+          <Icon as={MdOutlineMail} />
+        </Tags>
+      </HStack>
+      {hasSearch && <Search />}
     </HStack>
   );
 };

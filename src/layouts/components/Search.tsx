@@ -23,7 +23,7 @@ export const Search = () => {
   return (
     <>
       <Button ref={btnRef} colorScheme="outline" onClick={onOpen}>
-        <Icon as={FiSearch} w={5} h={5} color="gray.800" />
+        <Icon as={FiSearch} w={"24px"} h={"24px"} color="gray.800" />
       </Button>
       <Drawer
         isOpen={isOpen}

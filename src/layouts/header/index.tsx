@@ -1,17 +1,26 @@
 "use client";
 
-import { Box, Container, Divider, Flex } from "@chakra-ui/react";
+import { FormContact } from "@/components/FormContact";
+import { ModalBase } from "@/components/Modal";
+import {
+  Box,
+  Button,
+  Container,
+  Divider,
+  Flex,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { DesktopNav } from "../components/DeskhopNav";
+import { HeaderTop } from "../components/HeaderTop";
 import { Logo } from "../components/Logo";
 import { MobileNav } from "../components/MobileNav";
-import { Search } from "../components/Search";
-import { HeaderTop } from "../components/HeaderTop";
 
 export const Header = () => {
+  const { onToggle, onOpen, onClose, isOpen } = useDisclosure();
   return (
     <>
       <Container maxW="6xl" py="6px">
-        <HeaderTop />
+        <HeaderTop hasSearch />
       </Container>
       <Divider />
       <Box
@@ -47,10 +56,18 @@ export const Header = () => {
               <DesktopNav />
             </Flex>
           </Flex>
-
-          <Search />
+          <Button
+            colorScheme="red"
+            size={{ base: "sm", md: "md" }}
+            onClick={onToggle}
+          >
+            Đăng ký
+          </Button>
         </Container>
       </Box>
+      <ModalBase isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
+        <FormContact />
+      </ModalBase>
     </>
   );
 };
