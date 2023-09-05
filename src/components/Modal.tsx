@@ -24,7 +24,7 @@ export const ModalBase = (props: IModalBase) => {
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton />
-          <ModalBody bg={"gray.100"} rounded={"xl"}>
+          <ModalBody bg={"gray.100"} rounded={"xl"} p={0}>
             {children}
           </ModalBody>
         </ModalContent>
