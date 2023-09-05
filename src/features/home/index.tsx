@@ -1,10 +1,13 @@
 "use client";
 
+import { Loading } from "@/components/Loading";
 import { Box, useDisclosure } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
 
-const Banner = dynamic(() => import("./Banner").then((mod) => mod.Banner));
+const Banner = dynamic(() => import("./Banner").then((mod) => mod.Banner), {
+  loading: () => <Loading />,
+});
 const Categorys = dynamic(() =>
   import("./Categorys").then((mod) => mod.Categorys)
 );
