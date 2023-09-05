@@ -12,8 +12,8 @@ import {
   chakra,
   useColorModeValue,
 } from "@chakra-ui/react";
-import React, { ReactNode } from "react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { ReactNode } from "react";
+import { FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa";
 import { InputRes } from "../../components/InputRes";
 import { Logo } from "../components/Logo";
 
@@ -104,14 +104,17 @@ export const Footer = () => {
           <Stack align={"flex-start"}>
             <ListHeader>Mạng xã hội</ListHeader>
             <Stack direction={"row"} spacing={6}>
-              <SocialButton label={"Twitter"} href={"#"}>
-                <FaTwitter />
+              <SocialButton
+                label={"Twitter"}
+                href={"https://www.facebook.com/groups/vsteponline"}
+              >
+                <FaFacebook />
               </SocialButton>
               <SocialButton label={"YouTube"} href={"#"}>
                 <FaYoutube />
               </SocialButton>
               <SocialButton label={"Instagram"} href={"#"}>
-                <FaInstagram />
+                <FaTiktok />
               </SocialButton>
             </Stack>
           </Stack>
@@ -128,7 +131,7 @@ export const Footer = () => {
           justify={{ md: "center" }}
           align={{ md: "center" }}
         >
-          <Text textAlign="center">© 2023 Copyright by Leminh</Text>
+          <Text textAlign="center">© 2023 Copyright by IT AUM</Text>
         </Container>
       </Box>
     </Box>
