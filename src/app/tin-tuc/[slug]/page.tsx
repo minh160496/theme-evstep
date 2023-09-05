@@ -30,7 +30,7 @@ const getSamePosts = async (post: any) => {
 
     const postsWithFeaturedImages = relatedPosts?.map((relatedPost: any) => {
       const featured_image =
-        post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
+        relatedPost._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
 
       return {
         ...relatedPost,
