@@ -37,7 +37,7 @@ export const HeaderTop = ({ hasSearch }: { hasSearch?: boolean }) => {
           <Icon as={LuPhone} />
         </Tags>
 
-        <Tags type="email" label="aume@gmail.com">
+        <Tags type="mailto" label="aume@gmail.com">
           <Icon as={MdOutlineMail} />
         </Tags>
       </HStack>
