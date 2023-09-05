@@ -15,7 +15,7 @@ import { Partner } from "./Partner";
 import { Review } from "./Review";
 import { Support } from "./Support";
 
-export const Home = () => {
+export const Home = ({ posts }: { posts: any[] }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export const Home = () => {
         <Review />
       </Box>
       <Box mt="120px">
-        <Event />
+        <Event posts={posts} />
       </Box>
       <Box mt="120px">
         <Itel />
