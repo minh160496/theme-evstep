@@ -41,6 +41,8 @@ export const CardBlogVert = ({
       overflow="hidden"
       variant="outline"
       rounded={"2xl"}
+      as={Link}
+      href={path ?? "#"}
     >
       <Box flex={1}>
         <Box m={"12px 24px"} rounded={"sm"} overflow={"hidden"}>
@@ -65,7 +67,12 @@ export const CardBlogVert = ({
             >
               {tag}
             </Tag>
-            <Heading as={"h4"} size="sm">
+            <Heading
+              as={"h4"}
+              size="sm"
+              _hover={{ color: "red.500" }}
+              transition={"all ease .3s"}
+            >
               {title}
             </Heading>
           </HStack>
@@ -80,7 +87,7 @@ export const CardBlogVert = ({
         </CardBody>
 
         <CardFooter pt={0}>
-          <Button variant="link" colorScheme="red" as={Link} href={path ?? "#"}>
+          <Button variant="link" colorScheme="red">
             Xem thêm
           </Button>
         </CardFooter>
