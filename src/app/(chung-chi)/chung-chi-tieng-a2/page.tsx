@@ -1,6 +1,12 @@
 "use client";
 
-import { CertificateA2 } from "@/features/certificates/CertificateA2";
+import dynamic from "next/dynamic";
+
+const CertificateA2 = dynamic(() =>
+  import("@/features/certificates/CertificateA2").then(
+    (mod) => mod.CertificateA2
+  )
+);
 
 const Page = () => {
   return <CertificateA2 />;

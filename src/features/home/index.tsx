@@ -1,19 +1,27 @@
 "use client";
 
 import { Box, useDisclosure } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
 import { useEffect } from "react";
-import { Banner } from "./Banner";
-import { Categorys } from "./Categorys";
-import { Contact } from "./Contact";
-import { Counters } from "./Counters";
-import { Event } from "./Event";
-import { Itel } from "./Itel";
-import { ListTeacher } from "./ListTeacher";
-import { ModalBase } from "./Modal";
-import { Model } from "./Model";
-import { Partner } from "./Partner";
-import { Review } from "./Review";
-import { Support } from "./Support";
+
+const Banner = dynamic(() => import("./Banner").then((mod) => mod.Banner));
+const Categorys = dynamic(() =>
+  import("./Categorys").then((mod) => mod.Categorys)
+);
+const Contact = dynamic(() => import("./Contact").then((mod) => mod.Contact));
+const Counters = dynamic(() =>
+  import("./Counters").then((mod) => mod.Counters)
+);
+const Event = dynamic(() => import("./Event").then((mod) => mod.Event));
+const Itel = dynamic(() => import("./Itel").then((mod) => mod.Itel));
+const ListTeacher = dynamic(() =>
+  import("./ListTeacher").then((mod) => mod.ListTeacher)
+);
+const ModalBase = dynamic(() => import("./Modal").then((mod) => mod.ModalBase));
+const Model = dynamic(() => import("./Model").then((mod) => mod.Model));
+const Partner = dynamic(() => import("./Partner").then((mod) => mod.Partner));
+const Review = dynamic(() => import("./Review").then((mod) => mod.Review));
+const Support = dynamic(() => import("./Support").then((mod) => mod.Support));
 
 export const Home = ({ posts }: { posts: any[] }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();

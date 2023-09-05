@@ -12,12 +12,16 @@ import {
   Heading,
   VStack,
 } from "@chakra-ui/react";
-import { useRouter, useSearchParams } from "next/navigation";
+import styled from "@emotion/styled";
+import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
+import ReactPaginate from "react-paginate";
 import { SwiperSlide } from "swiper/react";
 import xss from "xss";
-import { SLiderPosts } from "./SliderPosts";
-import ReactPaginate from "react-paginate";
-import styled from "@emotion/styled";
+
+const SLiderPosts = dynamic(() =>
+  import("./SliderPosts").then((mod) => mod.SLiderPosts)
+);
 
 const StyledPaginate = styled(ReactPaginate)`
   margin-bottom: 2rem;
