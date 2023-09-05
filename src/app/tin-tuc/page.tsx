@@ -2,7 +2,7 @@
 
 import { Posts } from "@/features/posts";
 
-export const getPost = async ({ page }: { page: string }) => {
+const getPost = async ({ page }: { page: string }) => {
   const api_url =
     process.env.NEXT_PUBLIC_API_URL ||
     "http://localhost/wordpress/wp-json/wp/v2";
