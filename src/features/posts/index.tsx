@@ -2,6 +2,7 @@
 
 import { CardBlog } from "@/components/CardBlog";
 import { CardBlogVert } from "@/components/CardBlogVert";
+import { Loading } from "@/components/Loading";
 import { LayoutBottom } from "@/layouts/layoutPosts/LayoutBottom";
 import { formatDate } from "@/ultil/date";
 import {
@@ -19,8 +20,11 @@ import ReactPaginate from "react-paginate";
 import { SwiperSlide } from "swiper/react";
 import xss from "xss";
 
-const SLiderPosts = dynamic(() =>
-  import("./SliderPosts").then((mod) => mod.SLiderPosts)
+const SLiderPosts = dynamic(
+  () => import("./SliderPosts").then((mod) => mod.SLiderPosts),
+  {
+    loading: () => <Loading />,
+  }
 );
 
 const StyledPaginate = styled(ReactPaginate)`
