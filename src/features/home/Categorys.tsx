@@ -19,7 +19,7 @@ export const Item = ({
       transition={"all ease .4s"}
       _hover={{ transform: "translateY(-10px)" }}
     >
-      <Image width={700} height={400} src={image} alt={title} />
+      <Image priority width={700} height={400} src={image} alt={title} />
       <Box
         as={Flex}
         pos={"absolute"}
