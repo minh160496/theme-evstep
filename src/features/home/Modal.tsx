@@ -5,7 +5,6 @@ import {
   ModalContent,
   ModalOverlay,
 } from "@chakra-ui/react";
-import React from "react";
 import { FormContact } from "../../components/FormContact";
 
 interface IModalBase {
