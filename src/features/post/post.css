@@ -17,6 +17,21 @@
   padding-bottom: "16px";
 }
 
+.not-found {
+  padding-top: 62px;
+}
+
+.not-found p {
+  font-weight: 600;
+  padding-bottom: 24px;
+  font-size: 1.2rem;
+}
+
+.not-found a {
+  color: red;
+  display: block;
+}
+
 @media (min-width: 1280px) {
   .post {
     flex-direction: row;
@@ -27,5 +42,9 @@
     margin-right: 24px;
     margin-left: -72px;
     right: 100%;
+  }
+
+  .not-found p {
+    font-size: 2rem;
   }
 }
