@@ -40,17 +40,17 @@ export const Item = ({
 export const categotys = [
   {
     image: "/category-1.png",
-    path: "/tin-tuc",
+    path: "#",
     title: "Tiểu Học tiếng Anh",
   },
   {
     image: "/category-2.jpg",
-    path: "/tin-tuc",
+    path: "#",
     title: "Tiếng Anh THCS",
   },
   {
     image: "/category-3.jpg",
-    path: "/tin-tuc",
+    path: "#",
     title: "Lyện thi - luyện kỹ năng",
   },
 ];

@@ -27,7 +27,7 @@ const Review = dynamic(() => import("./Review").then((mod) => mod.Review));
 const Support = dynamic(() => import("./Support").then((mod) => mod.Support));
 
 export const Home = ({ posts }: { posts: any[] }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose, onToggle } = useDisclosure();
 
   useEffect(() => {
     setTimeout(() => {
@@ -60,7 +60,7 @@ export const Home = ({ posts }: { posts: any[] }) => {
         <Event posts={posts} />
       </Box>
       <Box mt="120px">
-        <Itel />
+        <Itel openModal={onToggle} />
       </Box>
       <Box mt="60px">
         <Partner />

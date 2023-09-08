@@ -16,6 +16,7 @@ import { ReactNode } from "react";
 import { FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa";
 import { InputRes } from "../../components/InputRes";
 import { Logo } from "../components/Logo";
+import Link from "next/link";
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
@@ -72,32 +73,35 @@ export const Footer = () => {
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={"flex-start"}>
             <ListHeader>Thông tin liên hệ</ListHeader>
-            <Box as="a" href={"#"}>
-              Ms Hoa Junior - English for the future
+            <Box as={Link} href={"#"}>
+              Evstep - English center
             </Box>
-            <Box as="a" href={"#"}>
+            <Box as={Link} href={"tel:0965500306"}>
               Hotline: 0965500306
             </Box>
-            <Box as="a" href={"#"}>
-              Email: junior@anhngumshoa.com
+            <Box as={Link} href={"mailto:aum@gmail.com"}>
+              Email: aume@gmail.com
             </Box>
           </Stack>
 
           <Stack align={"flex-start"}>
             <ListHeader>Hỗ trợ</ListHeader>
-            <Box as="a" href={"#"}>
-              Help Center
+            <Box
+              as={Link}
+              href={"https://tienganhb1.com/v%E1%BB%81-ch%C3%BAng-t%C3%B4i"}
+            >
+              Về chúng tôi
             </Box>
-            <Box as="a" href={"#"}>
-              Safety Center
+            <Box as={Link} href={"/chung-chi-tieng-a2"}>
+              Chứng chỉ A2
             </Box>
-            <Box as="a" href={"#"}>
-              Community Guidelines
+            <Box as="a" href={"/chung-chi-tieng-b1"}>
+              CHứng chỉ B1
             </Box>
           </Stack>
 
           <Stack align={"flex-start"}>
-            <ListHeader>Về EVStep</ListHeader>
+            <ListHeader>Nhận diện</ListHeader>
             <Logo />
           </Stack>
 

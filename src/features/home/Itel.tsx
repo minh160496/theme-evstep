@@ -14,13 +14,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
-
-interface Props {
-  children: React.ReactNode;
-  bg: string;
-}
 
 const Item = ({
   degree,
@@ -29,6 +23,7 @@ const Item = ({
   pointInput,
   book,
   bg,
+  openModal,
 }: {
   degree: string;
   step: string;
@@ -36,6 +31,7 @@ const Item = ({
   pointInput: string;
   book: string;
   bg: string;
+  openModal?: () => void;
 }) => {
   return (
     <CardSpecial bg={bg} step={step}>
@@ -54,7 +50,7 @@ const Item = ({
           <List spacing={3} textAlign="start" px={4}>
             <ListItem fontSize={"sm"}>
               <ListIcon as={FaCheckCircle} color="green.500" />
-              Điểm đầu vào: <strong>{`<${pointInput}`}</strong>
+              Điểm đầu vào: <strong>{pointInput}</strong>
             </ListItem>
             <ListItem fontSize={"sm"}>
               <ListIcon as={FaCheckCircle} color="green.500" />
@@ -62,8 +58,13 @@ const Item = ({
             </ListItem>
           </List>
           <Box w="80%" pt={7}>
-            <Button w="full" variant="outline" colorScheme="red">
-              Xem lộ trình
+            <Button
+              w="full"
+              variant="outline"
+              colorScheme="red"
+              onClick={openModal}
+            >
+              Nhận lộ trình
             </Button>
           </Box>
         </VStack>
@@ -77,37 +78,37 @@ const itels = [
     degree: "A2",
     step: "Nền tảng",
     pointOutput: "3.5",
-    pointInput: "3.5 (A0,A1)",
+    pointInput: "< 3.5 (A0,A1)",
     book: "Skilful F và Skillful 1",
     bg: "purple",
   },
   {
-    degree: "A2",
-    step: "Nền tảng",
-    pointOutput: "3.5",
-    pointInput: "3.5 (A0,A1)",
+    degree: "B1",
+    step: "Khởi hành",
+    pointOutput: "4.0 - 5.0",
+    pointInput: "3.5 (A2)",
     book: "Skilful F và Skillful 1",
     bg: "teal",
   },
   {
-    degree: "A2",
-    step: "Nền tảng",
-    pointOutput: "3.5",
-    pointInput: "3.5 (A0,A1)",
+    degree: "C2",
+    step: "Tăng tốc",
+    pointOutput: "5.5 - 6.5",
+    pointInput: "4.0 - 5.0 (A2)",
     book: "Skilful F và Skillful 1",
     bg: "orange",
   },
   {
-    degree: "A2",
-    step: "Nền tảng",
-    pointOutput: "3.5",
-    pointInput: "3.5 (A0,A1)",
+    degree: "C1",
+    step: "Vươn xa",
+    pointOutput: "7.0 - 8.0",
+    pointInput: "5.5 - 6.5 (B2)",
     book: "Skilful F và Skillful 1",
     bg: "red",
   },
 ];
 
-export const Itel = () => {
+export const Itel = ({ openModal }: { openModal?: () => void }) => {
   return (
     <Box bg={"gray.50"}>
       <Container maxW={"6xl"}>
@@ -137,6 +138,7 @@ export const Itel = () => {
                 pointInput={itel.pointInput}
                 pointOutput={itel.pointOutput}
                 book={itel.book}
+                openModal={openModal}
               />
             ))}
           </Stack>
