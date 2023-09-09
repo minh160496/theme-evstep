@@ -3,7 +3,7 @@
 import { Posts } from "@/features/posts";
 
 const getPost = async ({ page }: { page: string }) => {
-  const api_url = process.env.API_URL || "";
+  const api_url = process.env.NEXT_PUBLIC_API_URL || "";
   const res = await fetch(
     `${api_url}/posts?_embed&per_page=10&status=publish&page=${page}`,
     {
