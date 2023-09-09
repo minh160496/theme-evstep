@@ -1,9 +1,7 @@
 import { Home } from "@/features/home";
 
 const getPost = async ({ page }: { page: string }) => {
-  const api_url =
-    process.env.NEXT_PUBLIC_API_URL ||
-    "http://localhost/wordpress/wp-json/wp/v2";
+  const api_url = process.env.API_URL || "";
   const res = await fetch(
     `${api_url}/posts?_embed&per_page=3&status=publish&page=${page}`,
     {

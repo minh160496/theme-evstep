@@ -2,8 +2,7 @@
 
 import { Post } from "@/features/post";
 
-const api_url =
-  process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1/wordpress/wp-json/wp/v2";
+const api_url = process.env.API_URL || "";
 
 const getPost = async ({ slug }: { slug: string }) => {
   try {

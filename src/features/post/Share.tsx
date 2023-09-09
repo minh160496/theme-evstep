@@ -7,7 +7,7 @@ import { FiMail } from "react-icons/fi";
 import { ImFacebook } from "react-icons/im";
 
 export const Share = ({ url }: { url?: string }) => {
-  const domain = process.env.NEXT_PUBLIC_DOMAIN || "http://localhost:3000";
+  const domain = process.env.NEXT_PUBLIC_DOMAIN || "";
 
   const handleCopyLink = async () => {
     try {

@@ -51,8 +51,7 @@ export const FormContact = (props: IForm) => {
 
   const handleSubmit = async (formData: any, actions: any) => {
     const NEXT_PUBLIC_GOOGLE_SCRIPT_WEB_APP_URL =
-      process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_WEB_APP_URL ||
-      "https://script.google.com/macros/s/AKfycbwzOcZJzO_j12XJSVcMJDiuRu8tFyWmznntsmBTNDvXWjQ082nYodWBeVAdUCKjWg8gew/exec";
+      process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_WEB_APP_URL || "";
     try {
       const res = await fetch(NEXT_PUBLIC_GOOGLE_SCRIPT_WEB_APP_URL, {
         method: "POST",
