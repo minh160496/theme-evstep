@@ -2,12 +2,13 @@
 
 import {
   Avatar,
+  AvatarBadge,
   Box,
   Center,
+  Flex,
   Heading,
   Stack,
   Text,
-  AvatarBadge,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,8 +43,12 @@ export const CardBlog = ({
       pos={"relative"}
       transition={"all ease .4s"}
       _hover={{ transform: "translateY(-24px)" }}
+      className="card-blog"
+      h={"100%"}
     >
-      <Box
+      <Flex
+        flexDir={"column"}
+        justify={"space-between"}
         maxW={"445px"}
         w={"full"}
         bg={"white"}
@@ -51,42 +56,59 @@ export const CardBlog = ({
         rounded={"md"}
         p={6}
         overflow={"hidden"}
+        h={"100%"}
       >
-        <Box bg={"gray.100"} mt={-6} mx={-6} mb={6} pos={"relative"}>
-          <Image
-            width={600}
-            height={350}
-            src={image || `/blog.jpg`}
-            alt={title}
-          />
-        </Box>
-        <Stack>
-          <Text
-            color={"green.500"}
-            textTransform={"uppercase"}
-            fontWeight={800}
-            fontSize={"sm"}
-            letterSpacing={1.1}
-          >
-            {tag}
-          </Text>
-          <Heading
-            className="event-heading"
-            color={"gray.700"}
-            fontSize={{ base: "sm", lg: "md" }}
-            fontFamily={"body"}
-            _hover={{ color: "red.400" }}
-          >
-            {title}
-          </Heading>
-          {isMounted && (
-            <Text
-              color={"gray.500"}
-              fontSize={".8rem"}
-              dangerouslySetInnerHTML={{ __html: desc }}
+        <Box>
+          <Box bg={"gray.100"} mt={-6} mx={-6} mb={6} pos={"relative"}>
+            <Image
+              width={600}
+              height={350}
+              src={image || `/blog.jpg`}
+              alt={title}
             />
-          )}
-        </Stack>
+          </Box>
+          <Stack>
+            <Text
+              color={"green.500"}
+              textTransform={"uppercase"}
+              fontWeight={800}
+              fontSize={"sm"}
+              letterSpacing={1.1}
+            >
+              {tag}
+            </Text>
+            <Heading
+              className="event-heading"
+              color={"gray.700"}
+              fontSize={{ base: "sm", lg: "md" }}
+              fontFamily={"body"}
+              _hover={{ color: "red.400" }}
+              css={{
+                display: "-webkit-box",
+                "-webkit-line-clamp": "2",
+                "-webkit-box-orient": "vertical",
+                overflow: "hidden",
+                "text-overflow": "ellipsis",
+              }}
+            >
+              {title}
+            </Heading>
+            {isMounted && (
+              <Text
+                color={"gray.500"}
+                fontSize={".8rem"}
+                css={{
+                  display: "-webkit-box",
+                  "-webkit-line-clamp": "4",
+                  "-webkit-box-orient": "vertical",
+                  overflow: "hidden",
+                  "text-overflow": "ellipsis",
+                }}
+                dangerouslySetInnerHTML={{ __html: desc }}
+              />
+            )}
+          </Stack>
+        </Box>
         <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
           <Avatar bg={"teal.300"} size={"sm"}>
             <AvatarBadge boxSize="1.25em" bg="green.500" />
@@ -96,7 +118,7 @@ export const CardBlog = ({
             <Text color={"gray.500"}>{date}</Text>
           </Stack>
         </Stack>
-      </Box>
+      </Flex>
     </Center>
   );
 };

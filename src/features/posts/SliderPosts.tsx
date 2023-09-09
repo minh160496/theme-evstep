@@ -1,4 +1,4 @@
-import { Container, Heading } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { ReactNode } from "react";
 import "swiper/css";
@@ -10,6 +10,10 @@ import { useSize } from "../../hooks/useSizeWindow";
 export const StyledContainer = styled(Container)`
   .mySwiper {
     padding-bottom: 38px;
+  }
+
+  .swiper-slide {
+    height: 550px;
   }
 `;
 

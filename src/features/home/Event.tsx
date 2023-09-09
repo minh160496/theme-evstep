@@ -27,7 +27,13 @@ export const Event = ({ posts }: { posts: any[] }) => {
       </SimpleGrid>
 
       <HStack justify={"center"}>
-        <Button as={Link} href={"#"} colorScheme="red">
+        <Button
+          as={Link}
+          href={"/tin-tuc"}
+          colorScheme="red"
+          variant={"link"}
+          fontSize={{ base: "md", md: "xl" }}
+        >
           Xem tất cả
         </Button>
       </HStack>
