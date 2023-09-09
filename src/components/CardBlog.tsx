@@ -85,10 +85,10 @@ export const CardBlog = ({
               _hover={{ color: "red.400" }}
               css={{
                 display: "-webkit-box",
-                "-webkit-line-clamp": "2",
-                "-webkit-box-orient": "vertical",
+                WebkitLineClamp: "2",
+                WebkitBoxOrient: "vertical",
                 overflow: "hidden",
-                "text-overflow": "ellipsis",
+                textOverflow: "ellipsis",
               }}
             >
               {title}
@@ -99,10 +99,10 @@ export const CardBlog = ({
                 fontSize={".8rem"}
                 css={{
                   display: "-webkit-box",
-                  "-webkit-line-clamp": "4",
-                  "-webkit-box-orient": "vertical",
+                  WebkitLineClamp: "4",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
-                  "text-overflow": "ellipsis",
+                  textOverflow: "ellipsis",
                 }}
                 dangerouslySetInnerHTML={{ __html: desc }}
               />

@@ -20,7 +20,13 @@ export const Banner = () => {
         {bannerImages.map((image, index) => (
           <SwiperSlide key={index}>
             <Link href="#">
-              <Image width={1920} height={600} src={`${image}`} alt="image" />
+              <Image
+                width={1920}
+                height={600}
+                style={{ marginRight: "auto", marginLeft: "auto" }}
+                src={`${image}`}
+                alt="image"
+              />
             </Link>
           </SwiperSlide>
         ))}
