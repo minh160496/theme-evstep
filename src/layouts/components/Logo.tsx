@@ -8,7 +8,7 @@ export const Logo = () => {
         priority
         width={100}
         height={100}
-        src={`/logo-2.svg`}
+        src={`/logo.png`}
         alt="logo evstep"
       />
     </Link>
