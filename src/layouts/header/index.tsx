@@ -31,7 +31,6 @@ export const Header = () => {
         right={0}
         zIndex={10}
         bg={"white"}
-        py={"12px"}
       >
         <Container
           as={Flex}

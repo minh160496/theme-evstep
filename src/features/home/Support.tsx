@@ -22,13 +22,13 @@ import { SlCalender } from "react-icons/sl";
 const accSupport = [
   {
     icon: <GiSpookyHouse />,
-    title: "Trải nghiệm môi trường học Online đầy cảm hứng",
+    title: "Trải nghiệm mô hình lớp học ảo 4.0",
     content:
-      "Nhờ phương pháp RIPL đột phá hiệu quả. Học viên nghe giảng, làm bài, trao đổi tài liệu và thảo luận trực tiếp với giáo viên, bạn bè như đến tận lớp học Offline.",
+      "=> Hệ thống đào tạo trực tuyến MLS thông minh giúp cho việc học tập, theo dõi lộ trình cùng với đó tăng cường sự kết nối giữa học viên và giảng viên trong suốt quá trình học.",
   },
   {
     icon: <BiSupport />,
-    title: "Đội ngũ tư vấn 24/7",
+    title: "Đội ngũ tư vấn hỗ trợ 24/7",
     content:
       "Đội ngũ tư vấn viên 24/7 luôn sẵn sàng giải đáp thắc mắc cho ba mẹ và các con",
   },
@@ -36,13 +36,13 @@ const accSupport = [
     icon: <PiPiggyBankBold />,
     title: "Tiết kiệm chi phí và thời gian",
     content:
-      "Lớp học online của Ms Hoa Junior với lộ trình cá nhân hóa giúp học viên tiết kiệm thời gian và chi phí.",
+      "Việc học trực tuyến 100% giúp bạn tiết kiệm tối đa thời gian và chi phí so với việc học tập và ôn luyện tại trung tâm.",
   },
   {
     icon: <SlCalender />,
-    title: "Lịch học linh hoạt",
+    title: "Thời gian học tập linh hoạt",
     content:
-      "Lịch học được linh hoạt theo thời gian của học viên giúp các con không bỏ lỡ bất kì nội dung kiến thức nào.",
+      "Lịch học được linh hoạt theo thời gian của học viên giúp bạn vừa đảm bảo được giữa mục tiêu đề ra vừa không ảnh hưởng quá nhiều tới công việc và sinh hoạt hàng ngày.",
   },
   {
     icon: <MdOutlineLocalShipping />,
@@ -101,7 +101,7 @@ export const Support = () => {
         </GridItem>
         <GridItem>
           <Heading fontSize={"sm"} color={"red.500"} pb="16px">
-            Tham gia Lớp học Online tại Ms Hoa Junior bạn sẽ được:
+            Lợi ích bạn nhận được khi tham gia ôn luyện Online tại Vstep.EDU.VN
           </Heading>
           <AccSupport />
         </GridItem>

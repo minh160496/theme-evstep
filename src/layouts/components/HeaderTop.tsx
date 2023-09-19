@@ -33,11 +33,11 @@ export const HeaderTop = ({ hasSearch }: { hasSearch?: boolean }) => {
   return (
     <HStack align={"center"} justify={"space-between"}>
       <HStack>
-        <Tags type="tel" label="0985764235">
+        <Tags type="tel" label="0914190055">
           <Icon as={LuPhone} />
         </Tags>
 
-        <Tags type="mailto" label="aume@gmail.com">
+        <Tags type="mailto" label="luyenthi.Vstep@gmail.com">
           <Icon as={MdOutlineMail} />
         </Tags>
       </HStack>

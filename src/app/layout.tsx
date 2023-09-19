@@ -8,8 +8,8 @@ import { Suspense } from "react";
 import { Providers } from "./provider";
 
 export const metadata: Metadata = {
-  title: "Trang chủ EVstep",
-  description: "Evstep - luyện thi tiếng anh",
+  title: "Trang chủ Vstep",
+  description: "Vstep - luyện thi tiếng anh",
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

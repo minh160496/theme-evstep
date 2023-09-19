@@ -1,5 +1,6 @@
 import {
   Box,
+  Center,
   Container,
   Heading,
   List,
@@ -50,7 +51,7 @@ export const CertificateA2 = () => {
           <Heading size={"md"} pb={"12px"}>
             Chứng chỉ tiếng Anh A2 là gì?
           </Heading>
-          <SimpleGrid columns={{ base: 1, lg: 2 }} gap={"24px"}>
+          <SimpleGrid columns={{ base: 1, lg: 1 }} gap={"24px"}>
             <Text>
               Chứng chỉ tiếng Anh A2 là trình độ tiếng Anh bậc 2 theo khung năng
               lực ngoại ngữ 6 bậc dành cho Việt Nam hay khung tham chiếu châu Âu
@@ -62,12 +63,19 @@ export const CertificateA2 = () => {
               đi kèm.
             </Text>
 
-            <Image
-              src={`/van-bang1.jpg`}
-              alt="Văn bằng"
-              width={400}
-              height={500}
-            />
+            <Center>
+              <Box>
+                <Image
+                  src={`/van-bang1.jpg`}
+                  alt="Văn bằng"
+                  width={400}
+                  height={500}
+                />
+                <Text textAlign={"center"} fontWeight={"bold"}>
+                  Chứng chỉ ngoại ngữ A2 tại Vstep
+                </Text>
+              </Box>
+            </Center>
           </SimpleGrid>
         </Box>
         <Box pt={"42px"}>

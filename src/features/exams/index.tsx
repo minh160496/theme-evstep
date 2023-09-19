@@ -132,7 +132,7 @@ export const ExamsPlan = () => {
               pb="16px"
               color={"white"}
             >
-              Lịch thi Evstep
+              Lịch thi Vstep
             </Heading>
           </Container>
         </Box>

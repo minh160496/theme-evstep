@@ -27,7 +27,7 @@ export const Partner = () => {
   return (
     <StyledContainer maxW="6xl">
       <Heading size={"lg"} textAlign={"center"} pb={"24px"}>
-        Đối tác của Evstep
+        Đối tác của Vstep
       </Heading>
       <Swiper
         slidesPerView={(size.width < 480 && 3) || (size.width < 992 && 4) || 5}
@@ -45,7 +45,7 @@ export const Partner = () => {
                 width={200}
                 height={150}
                 src={partner}
-                alt="Đối tác Evstep"
+                alt="Đối tác Vstep"
               />
             }
           </SwiperSlide>

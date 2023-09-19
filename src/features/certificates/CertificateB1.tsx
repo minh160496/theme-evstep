@@ -1,5 +1,6 @@
 import {
   Box,
+  Center,
   Container,
   Heading,
   List,
@@ -22,7 +23,7 @@ export const CertificateB1 = () => {
             pb="16px"
             color={"white"}
           >
-            Thông tin từ A-Z về kỳ thi cấp bằng B1 tiếng Anh năm 2022
+            Thông tin từ A-Z về kỳ thi cấp bằng B1 tiếng Anh năm 2023
           </Heading>
           <Text
             textAlign={"center"}
@@ -44,7 +45,7 @@ export const CertificateB1 = () => {
           path="https://tienganhb1.com/KiemTraTrinhDo"
           label="Bắt đầu kiểm tra"
         />
-        <SimpleGrid columns={{ base: 1, lg: 2 }} gap={"24px"}>
+        <SimpleGrid columns={{ base: 1, lg: 1 }} gap={"24px"}>
           <Box pt={"42px"}>
             <Heading size={"md"} pb={"12px"}>
               Bằng B1 tiếng Anh là gì?
@@ -59,14 +60,19 @@ export const CertificateB1 = () => {
               </Text>
             </Box>
           </Box>
-          <Box pt={"42px"}>
-            <Image
-              src={`/chung-chi-b1.jpg`}
-              alt="Chứng chỉ B1"
-              width={400}
-              height={500}
-            />
-          </Box>
+          <Center pt={"42px"}>
+            <Box>
+              <Image
+                src={`/chung-chi-b1.jpg`}
+                alt="Chứng chỉ B1"
+                width={400}
+                height={500}
+              />
+              <Text textAlign={"center"} fontWeight={"bold"}>
+                Chứng chỉ tại Vstep
+              </Text>
+            </Box>
+          </Center>
         </SimpleGrid>
         <Box pt={"42px"}>
           <Heading size={"md"} pb={"12px"}>
@@ -138,7 +144,7 @@ export const CertificateB1 = () => {
           <BoxTest
             title="Hãy tham gia cộng đồng luyện thi chứng chỉ tiếng Anh A2, B1, B2, C1 "
             desc="Nơi đây giảng viên của VIVIAN sẽ giải đáp cho bạn phương pháp học, tài liệu, đề thi mới nhất trên cả nước. "
-            path="https://www.facebook.com/groups/vsteponline"
+            path=" https://www.facebook.com/groups/1675641029616069"
             label="Cộng đồng luyện thi VSTEP (A2, B1, B2, C1)"
           />
         </Box>

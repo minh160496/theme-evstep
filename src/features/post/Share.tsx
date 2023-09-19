@@ -43,7 +43,7 @@ export const Share = ({ url }: { url?: string }) => {
         icon={<Icon as={FiMail} w={"18px"} h={"18px"} />}
         as={Link}
         href={`mailto:?subject=${encodeURIComponent(
-          "Bài viết trang Evstep"
+          "Bài viết trang Vstep"
         )}&body=${encodeURIComponent(`Xem bài viết tại: ${domain}/${url}`)}`}
         aria-label="email"
         rounded={"full"}

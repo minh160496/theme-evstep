@@ -109,9 +109,9 @@ export const ListTeacher = () => {
         pb={"32px"}
         textAlign={"center"}
       >
-        300+ GIÁO VIÊN
+        100+ GIÁO VIÊN
         <Heading fontSize={"2xl"} color={"gray.700"} textAlign={"center"}>
-          TRUYỀN CẢM HỨNG
+          CHUYÊN MÔN
         </Heading>
       </Heading>
       <Box>

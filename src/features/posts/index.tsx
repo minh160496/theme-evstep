@@ -88,7 +88,7 @@ export const Posts = ({
             pb="16px"
             color={"white"}
           >
-            Tin tức EVstep
+            Tin tức Vstep
           </Heading>
         </Container>
       </Box>

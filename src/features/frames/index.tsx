@@ -20,9 +20,7 @@ export const Frames = () => {
             size={"sm"}
             fontWeight={"bold"}
             color={"white"}
-          >
-            Phần mô tả khung năng lực 6 bậc
-          </Text>
+          ></Text>
         </Container>
       </Box>
       <Box>
@@ -31,7 +29,7 @@ export const Frames = () => {
             title="Kiểm tra trình độ A2, B1, B2 miễn phí"
             desc="Quà tặng trị giá 280K khi hoàn thành bài kiểm tra 15 phút"
             label="Bắt đầu kiểm tra"
-            path="https://tienganhb1.com/KiemTraTrinhDo"
+            path="/"
           />
         </Container>
       </Box>

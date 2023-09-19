@@ -114,12 +114,13 @@ export const Itel = ({ openModal }: { openModal?: () => void }) => {
       <Container maxW={"6xl"}>
         <Box py={12}>
           <VStack spacing={2} textAlign="center">
-            <Heading size={"lg"}>Học IELTS VớiGiáo Viên Bản Ngữ</Heading>
+            <Heading size={"lg"}>
+              Ôn luyện lấy chứng chỉ Vstep ngay hôm nay
+            </Heading>
             <Text fontSize="sm" color={"gray.500"}>
-              Khóa học IELTS với giáo viên bản ngữ được Marathon thiết kế độc
-              quyền, xây dựng kiến thức nền tảng đến nâng cao, giúp học sinh làm
-              quen chiến lược thi và rèn luyện các kĩ năng Nghe - Nói - Đọc -
-              Viết hiệu quả.
+              Khóa ôn luyện chứng chỉ Vstep được thực hiện qua hệ thống lớp học
+              ảo thông mình cùng với sự hỗ trợ của các giảng viên nhiều kinh
+              nghiệm sẽ giúp các bạn đạt được mục tiêu đề ra
             </Text>
           </VStack>
           <Stack

@@ -8,8 +8,9 @@ export const Logo = () => {
         priority
         width={100}
         height={100}
+        style={{ position: "relative", transform: "scale(1.6)" }}
         src={`/logo.png`}
-        alt="logo evstep"
+        alt="logo Vstep"
       />
     </Link>
   );

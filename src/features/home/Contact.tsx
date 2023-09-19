@@ -17,7 +17,7 @@ export const Contact = () => {
               width={500}
               height={600}
               src={`/image-sale.png`}
-              alt="Khuyến mãi Evstep"
+              alt="Khuyến mãi Vstep"
             />
           </Box>
 

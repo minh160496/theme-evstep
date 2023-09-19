@@ -100,7 +100,7 @@ export const Schedule = () => {
         </Box>
         <Container maxW={"6xl"} pt={"42px"}>
           <Heading as={"h2"} size={"lg"} pb={"18px"}>
-            Lịch khai giảng các lớp tại TP.Hồ Chí Minh
+            Lịch khai giảng các lớp tiếng Anh tại Vstep
           </Heading>
           <Text>
             Tiếng Anh là công cụ để khám phá kiến thức, chìa khóa để bước tới
@@ -112,7 +112,7 @@ export const Schedule = () => {
             nhỏ để tương lai của con có nhiều cơ hội hơn?
           </Text>
 
-          <SimpleGrid
+          {/* <SimpleGrid
             columns={{ base: 1, md: 2, lg: 3 }}
             gap={"32px"}
             mt={"62px"}
@@ -136,7 +136,7 @@ export const Schedule = () => {
               courses={schedule[indexActive].details}
               onClick={onToggle}
             />
-          </Box>
+          </Box> */}
         </Container>
       </Box>
       <ModalBase isOpen={isOpen} onClose={onClose} onOpen={onOpen}>

@@ -30,7 +30,7 @@ export const Item = ({
 }) => {
   return (
     <Box
-      bg={"gray.700"}
+      bg={"green.700"}
       p={"24px"}
       rounded={"xl"}
       color={"white"}
@@ -53,7 +53,7 @@ export const Item = ({
       </HStack>
       <Heading size={{ base: "sm", lg: "md" }}>{title}</Heading>
       <HStack pt={"24px"} flexDir={{ base: "column", lg: "row" }}>
-        <Box flex={1}>
+        {/* <Box flex={1}>
           <Image
             src={image}
             alt={name}
@@ -61,7 +61,7 @@ export const Item = ({
             height={200}
             style={{ borderRadius: "12px" }}
           />
-        </Box>
+        </Box> */}
         <Image
           src={`/dialog.svg`}
           width={60}
@@ -77,49 +77,37 @@ export const Item = ({
 
 const reviews = [
   {
-    name: "Nguyễn Văn A",
-    label: "Học sinh khóa X",
+    name: "Lưu Thị Khuyên ",
+    label: "Học viên Vstep",
     image: `/student.jpg`,
-    title:
-      "Học Viên Ms Hoa Junior cơ sở Phan Văn Trị, TPHCM xuất sắc đạt 13 - 15 khiên Cambridge",
+    title: "Học Viên",
     content:
-      "Các em học viên tại Ms Hoa Junior cơ sở 672A47 Đường Phan Văn Trị, Phường 10, Quận Gò Vấp, TPHCM chinh phục chứng chỉ Cambridge một cách xuất sắc. Các con đã luôn cố gắng học tập, rèn luyện tiếng Anh chăm chỉ để có được kết quả này, cô xin chúc mừng các con nhé!",
+      '"Rất cảm ơn trung tâm và các giảng viên đã hỗ trợ em rất nhiều trong việc ôn luyện trong kỳ thi lấy chứng chỉ Vstep. Mặc dù mục tiêu ban đầu đặt ra là B1 nhưng kết quả đạt được là B2 ngoài mong đợi của em."',
   },
   {
-    name: "Nguyễn Văn A",
-    label: "Học sinh khóa X",
+    name: "Lê Đức Anh",
+    label: "Học viên Vstep",
     image: `/student.jpg`,
-    title:
-      "Học Viên Ms Hoa Junior cơ sở Phan Văn Trị, TPHCM xuất sắc đạt 13 - 15 khiên Cambridge",
+    title: "Học Viên",
     content:
-      "Các em học viên tại Ms Hoa Junior cơ sở 672A47 Đường Phan Văn Trị, Phường 10, Quận Gò Vấp, TPHCM chinh phục chứng chỉ Cambridge một cách xuất sắc. Các con đã luôn cố gắng học tập, rèn luyện tiếng Anh chăm chỉ để có được kết quả này, cô xin chúc mừng các con nhé!",
+      '"Mặc dù việc học hoàn toàn trực tuyến nhưng không vì thế làm giảm chất lượng đào tạo. Mình cảm nhận được lượng kiến thức và sự hỗ trợ từ các thầy cô là rất nhiều. Xin cảm ơn trung tâm"',
   },
   {
-    name: "Nguyễn Văn A",
-    label: "Học sinh khóa X",
+    name: "Nguyễn Văn Bắc",
+    label: "Học viên Vstep",
     image: `/student.jpg`,
-    title:
-      "Học Viên Ms Hoa Junior cơ sở Phan Văn Trị, TPHCM xuất sắc đạt 13 - 15 khiên Cambridge",
+    title: "Học Viên",
+
     content:
-      "Các em học viên tại Ms Hoa Junior cơ sở 672A47 Đường Phan Văn Trị, Phường 10, Quận Gò Vấp, TPHCM chinh phục chứng chỉ Cambridge một cách xuất sắc. Các con đã luôn cố gắng học tập, rèn luyện tiếng Anh chăm chỉ để có được kết quả này, cô xin chúc mừng các con nhé!",
+      '"Với lộ trình đào tạo để đạt mục tiêu B2 thì tôi được hỗ trợ rất nhiều trong suốt quá trình học tập và cuối cùng đã đạt được mục tiêu đề ra. Cảm ơn đội ngũ và trung tâm, chúc cho các bạn đang theo học sẽ có một kết quả thi tốt."',
   },
   {
-    name: "Nguyễn Văn A",
-    label: "Học sinh khóa X",
+    name: "Nguyễn Đình Hưng ",
+    label: "Học viên Vstep",
     image: `/student.jpg`,
-    title:
-      "Học Viên Ms Hoa Junior cơ sở Phan Văn Trị, TPHCM xuất sắc đạt 13 - 15 khiên Cambridge",
+    title: "Học Viên",
     content:
-      "Các em học viên tại Ms Hoa Junior cơ sở 672A47 Đường Phan Văn Trị, Phường 10, Quận Gò Vấp, TPHCM chinh phục chứng chỉ Cambridge một cách xuất sắc. Các con đã luôn cố gắng học tập, rèn luyện tiếng Anh chăm chỉ để có được kết quả này, cô xin chúc mừng các con nhé!",
-  },
-  {
-    name: "Nguyễn Văn A",
-    label: "Học sinh khóa X",
-    image: `/student.jpg`,
-    title:
-      "Học Viên Ms Hoa Junior cơ sở Phan Văn Trị, TPHCM xuất sắc đạt 13 - 15 khiên Cambridge",
-    content:
-      "Các em học viên tại Ms Hoa Junior cơ sở 672A47 Đường Phan Văn Trị, Phường 10, Quận Gò Vấp, TPHCM chinh phục chứng chỉ Cambridge một cách xuất sắc. Các con đã luôn cố gắng học tập, rèn luyện tiếng Anh chăm chỉ để có được kết quả này, cô xin chúc mừng các con nhé!",
+      '"Phương pháp đào tạo và học tập rất sát với khung sườn của bài thi Vstep mà Bộ GD đã đưa ra. Điều tôi thấy hài lòng nhất là tôi hoàn toàn không bị xáo trộn bởi tôi có thể sắp xếp việc ôn luyện của mình vào bất kỳ khoảng thời gian rảnh rỗi nào mà mình có."',
   },
 ];
 
@@ -154,7 +142,7 @@ export const Review = () => {
             <FaRegCommentDots />
           </Heading>
           <Heading fontSize={"2xl"} color={"gray.700"} textAlign={"center"}>
-            CỦA HỌC VIÊN VÀ PHỤ HUYNH
+            CỦA HỌC VIÊN
           </Heading>
         </Heading>
         <StyledSwiper

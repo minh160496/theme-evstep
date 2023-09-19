@@ -15,12 +15,23 @@ import { BiLogoTiktok } from "react-icons/bi";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
-import { FormContact } from "./FormContact";
+import { FormContact } from "@/components/FormContact";
 
 export const Sidebar = ({ sticky }: { sticky?: string }) => {
   return (
     <Box pos={sticky ? "sticky" : "static"} top={sticky}>
       <Box>
+        <Heading
+          as={"h3"}
+          size={"md"}
+          pb={"20px"}
+          textAlign={{ base: "center", lg: "start" }}
+        >
+          Đăng ký
+        </Heading>
+        <FormContact title="Đăng ký nhận tin" />
+      </Box>
+      <Box pt={"24px"}>
         <Heading
           as={"h3"}
           size={"md"}
@@ -61,7 +72,7 @@ export const Sidebar = ({ sticky }: { sticky?: string }) => {
               color={"blue.600"}
               w={"full"}
             >
-              Fanpage Evstep
+              Fanpage Vstep
             </Button>
             <Button
               leftIcon={<FaFacebook />}
@@ -69,7 +80,7 @@ export const Sidebar = ({ sticky }: { sticky?: string }) => {
               color={"blue.600"}
               w={"full"}
             >
-              Group Evstep
+              Group Vstep
             </Button>
             <Button
               leftIcon={<AiFillYoutube />}
@@ -77,7 +88,7 @@ export const Sidebar = ({ sticky }: { sticky?: string }) => {
               color={"red.600"}
               w={"full"}
             >
-              Youtube Evstep
+              Youtube Vstep
             </Button>
             <Button
               leftIcon={<SiZalo />}
@@ -85,10 +96,10 @@ export const Sidebar = ({ sticky }: { sticky?: string }) => {
               color={"blue.600"}
               w={"full"}
             >
-              Group Zalo Evstep
+              Group Zalo Vstep
             </Button>
             <Button leftIcon={<BiLogoTiktok />} bg={"white"} w={"full"}>
-              Tiktok Evstep
+              Tiktok Vstep
             </Button>
             <VStack pt={"24px"} w={"full"}>
               <Text>Liên hệ trực tiếp</Text>
@@ -102,10 +113,6 @@ export const Sidebar = ({ sticky }: { sticky?: string }) => {
             </VStack>
           </VStack>
         </Box>
-      </Box>
-
-      <Box pt={"24px"}>
-        <FormContact title="Đăng ký nhận tin" action="Đăng ký" />
       </Box>
     </Box>
   );

@@ -74,13 +74,16 @@ export const Footer = () => {
           <Stack align={"flex-start"}>
             <ListHeader>Thông tin liên hệ</ListHeader>
             <Box as={Link} href={"#"}>
-              Evstep - English center
+              Vstep - English center
             </Box>
             <Box as={Link} href={"tel:0965500306"}>
-              Hotline: 0965500306
+              Địa chỉ: Số 116 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
             </Box>
-            <Box as={Link} href={"mailto:aum@gmail.com"}>
-              Email: aume@gmail.com
+            <Box as={Link} href={"tel:0965500306"}>
+              Hotline: 0914190055
+            </Box>
+            <Box as={Link} href={"mailto:luyenthi.Vstep@gmail.com"}>
+              Email: luyenthi.Vstep@gmail.com
             </Box>
           </Stack>
 
@@ -109,8 +112,8 @@ export const Footer = () => {
             <ListHeader>Mạng xã hội</ListHeader>
             <Stack direction={"row"} spacing={6}>
               <SocialButton
-                label={"Twitter"}
-                href={"https://www.facebook.com/groups/vsteponline"}
+                label={"Facebook"}
+                href={"https://www.facebook.com/onthichungchi.Vstep"}
               >
                 <FaFacebook />
               </SocialButton>

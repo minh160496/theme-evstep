@@ -55,10 +55,10 @@ export const TagItem = ({
 };
 
 const list = [
-  "Xem bài giảng trực tuyến",
-  "Học tập trên lớp cùng giáo viên",
-  "Ba mẹ cùng cùng con học tập",
-  "Trợ giảng hỗ trợ con học tập",
+  "Khóa học online 100%",
+  "Học mọi lúc mọi nơi",
+  "Lộ trình học tập rõ ràng",
+  "Đội ngũ cố vấn hỗ trợ 24/7",
 ];
 
 export const Model = () => {
@@ -77,7 +77,7 @@ export const Model = () => {
             fontSize={"2xl"}
             pb="12px"
           >
-            MÔ HÌNH LỚP HỌC
+            CHƯƠNG TRÌNH ĐÀO TẠO
             <Tag
               size={"2xl"}
               borderRadius="full"
@@ -90,7 +90,7 @@ export const Model = () => {
               py="8px"
               ml="12px"
             >
-              @ĐỘC QUYỀN
+              @TRỰC TUYẾN
             </Tag>
           </Heading>
           <Flex justify={"center"}>
@@ -100,9 +100,9 @@ export const Model = () => {
               color={"white"}
               maxW={"2xl"}
             >
-              Lớp học đảo ngược thúc đẩy khả năng tự học, tính chủ động và tích
-              cực trong học tập ở học trò, các con không phụ thuộc, chờ thầy cô
-              đưa kiến thức.
+              Chương trình học độc đáo, phù hợp với mọi đối tượng tạo được tính
+              chủ động và tích cực trong học tập, kiến thức được cập nhật liên
+              tục
             </Text>
           </Flex>
         </Box>
