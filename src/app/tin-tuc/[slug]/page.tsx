@@ -6,7 +6,9 @@ const api_url = process.env.API_URL || "";
 
 const getPost = async ({ slug }: { slug: string }) => {
   try {
-    const res = await fetch(`${api_url}/posts?slug=${slug}`);
+    const res = await fetch(`${api_url}/posts?slug=${slug}`, {
+      next: { revalidate: 1800 },
+    });
     const posts = await res.json();
 
     return posts[0];
@@ -22,7 +24,10 @@ const getSamePosts = async (post: any) => {
   if (categoryId) {
     // Lấy danh sách các bài viết cùng thể loại
     const resRelatedPosts = await fetch(
-      `${api_url}/posts?categories=${categoryId}&exclude=${post?.id}&per_page=3&_embed`
+      `${api_url}/posts?categories=${categoryId}&exclude=${post?.id}&per_page=3&_embed`,
+      {
+        next: { revalidate: 1800 },
+      }
     );
 
     const relatedPosts: any[] = await resRelatedPosts.json();
