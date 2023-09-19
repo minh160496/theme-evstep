@@ -3,10 +3,10 @@
 import { Loading } from "@/components/Loading";
 import dynamic from "next/dynamic";
 
-const CertificateA2 = dynamic(
+const CertificateC1 = dynamic(
   () =>
-    import("@/features/certificates/CertificateA2").then(
-      (mod) => mod.CertificateA2
+    import("@/features/certificates/CertificateC1").then(
+      (mod) => mod.CertificateC1
     ),
   {
     loading: () => <Loading />,
@@ -14,7 +14,7 @@ const CertificateA2 = dynamic(
 );
 
 const Page = () => {
-  return <CertificateA2 />;
+  return <CertificateC1 />;
 };
 
 export default Page;
