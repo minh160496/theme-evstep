@@ -1,21 +1,21 @@
 "use client";
 
+import { FormContact } from "@/components/FormContact";
 import { Item, categotys } from "@/features/home/Categorys";
 import {
   Box,
   Button,
   Heading,
-  Link,
   SimpleGrid,
   Text,
   VStack,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { AiFillYoutube } from "react-icons/ai";
 import { BiLogoTiktok } from "react-icons/bi";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
-import { FormContact } from "@/components/FormContact";
 
 export const Sidebar = ({ sticky }: { sticky?: string }) => {
   return (
@@ -71,6 +71,8 @@ export const Sidebar = ({ sticky }: { sticky?: string }) => {
               bg={"white"}
               color={"blue.600"}
               w={"full"}
+              as={Link}
+              href="https://www.facebook.com/onthichungchi.eVstep"
             >
               Fanpage Vstep
             </Button>
@@ -79,6 +81,8 @@ export const Sidebar = ({ sticky }: { sticky?: string }) => {
               bg={"white"}
               color={"blue.600"}
               w={"full"}
+              as={Link}
+              href="https://www.facebook.com/groups/1675641029616069"
             >
               Group Vstep
             </Button>
@@ -108,7 +112,7 @@ export const Sidebar = ({ sticky }: { sticky?: string }) => {
                 bg={"white"}
                 w={"full"}
               >
-                <Link href="tel: 0912345678">0912345678</Link>
+                <Link href="tel: 0914190055">0914190055</Link>
               </Button>
             </VStack>
           </VStack>
